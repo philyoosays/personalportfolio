@@ -2,9 +2,6 @@ import React from 'react';
 import MainBody from './MainBody'
 import './App.css';
 
-import dotenv from 'dotenv';
-dotenv.config()
-
 class App extends React.Component {
   constructor(props) {
     super(props);

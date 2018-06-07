@@ -1,0 +1,74 @@
+import React from 'react';
+
+import Skills from './Skills'
+import './AboutMe.css';
+
+import jsLogo from './icons/javascript.svg'
+import jQueryLogo from './icons/jquery.png'
+import nodeLogo from './icons/node.png'
+import expressLogo from './icons/expressjs.png'
+import psqlLogo from './icons/PostsgreSQL.png'
+import railsLogo from './icons/rails.png'
+import rubyLogo from './icons/ruby.png'
+import reactLogo from './icons/react.png'
+import reactNativeLogo from './icons/react_native.png'
+import psLogo from './icons/adobe_photoshop.png'
+import aiLogo from './icons/adobe_illustrator.png'
+import aeLogo from './icons/adobe_after_effects.png'
+import prLogo from './icons/adobe_premiere.png'
+
+export default function AboutMe() {
+  return(
+    <div className="container">
+      <section className="blurb">
+        <h2 className="header">I am a Full-Stack Developer</h2>
+        <p className="maintext">
+          I crave challenges, work fast, and love building awesome things.
+        </p>
+      </section>
+      <section className="skills">
+        <h3>SKILLS</h3>
+          <Skills
+            labelone="JavaScript"
+            labeltwo="JQuery"
+            labelthree="React.js"
+            labelfour="React Native"
+            iconone={jsLogo}
+            icontwo={jQueryLogo}
+            iconthree={reactLogo}
+            iconfour={reactNativeLogo}
+          />
+          <Skills
+            labelone="Ruby"
+            labeltwo="Rails"
+            labelthree="Node.js"
+            labelfour="Express.js"
+            iconone={rubyLogo}
+            icontwo={railsLogo}
+            iconthree={nodeLogo}
+            iconfour={expressLogo}
+          />
+          <Skills
+            labelone="PostgreSQL"
+            labeltwo=""
+            labelthree=""
+            labelfour=""
+            iconone={psqlLogo}
+            icontwo=""
+            iconthree=""
+            iconfour=""
+          />
+          <Skills
+            labelone="Premiere"
+            labeltwo="Photoshop"
+            labelthree="Illustrator"
+            labelfour="After Effects"
+            iconone={prLogo}
+            icontwo={psLogo}
+            iconthree={aiLogo}
+            iconfour={aeLogo}
+          />
+      </section>
+    </div>
+  );
+}

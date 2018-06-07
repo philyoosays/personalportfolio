@@ -1,0 +1,36 @@
+.contactheader, .contacttext {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  line-height: 1px;
+  /*border: 2px solid lime;*/
+}
+
+.contactcontainer {
+  margin: 0 auto;
+  /*border: 2px solid blue;*/
+  padding: 15px 0;
+  width: 40%;
+}
+
+.contacttext {
+  padding-left: 20px;
+  width: 60%;
+}
+
+.contactheader {
+  text-align: right;
+  width: 25%;
+}
+
+.container {
+  margin: 0 auto;
+  margin-top: 25px;
+  align-items: center;
+  /*border: 2px solid red;*/
+}
+
+a {
+  text-decoration: none;
+}
+

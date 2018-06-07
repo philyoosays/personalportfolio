@@ -1,0 +1,31 @@
+.container {
+  width: 70%;
+  margin: 0 auto;
+  padding-top: 30px;
+}
+
+.blurb {
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.skills {
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 30px;
+}
+
+.flexboxcontainer {
+  display: flex;
+  flex: 1;
+}
+
+.flexitem {
+  flex: 1;
+}
+
+.fleximage {
+  height: 100px;
+}

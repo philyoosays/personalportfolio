@@ -5,6 +5,9 @@ import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
+import dotenv from 'dotenv';
+dotenv.config()
+
 // import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 
 // dotenv.config()

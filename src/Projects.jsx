@@ -13,6 +13,7 @@ export default function Projects(props) {
         </div>
         <div className="flexcontainer">
           <div className="projectcontainer">
+            <h3>Summary</h3>
             <p className="description">{item.desc}</p>
             <h3>Tech</h3>
             <p className="description">{item.tech}</p>

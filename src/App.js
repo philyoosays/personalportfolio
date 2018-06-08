@@ -42,118 +42,35 @@ class App extends React.Component {
     let toggle = false;
     const divHeight = (this.state.windowWidth * .166)
     const backSplash = this.state.images.length === 0 ? '' : this.state.images.map((data, index) => {
-      if(data.width === data.height && toggle === false) {
-        toggle = true;
-        return(
-          <div className="imgcontainer" onResize={this.resetWindowWidth} >
-            <img className="image" src={data.url} alt="" />
-          </div>
-        )
-      } else if(data.width === data.height && toggle === true) {
-        return(
-          <div className="imgcontainer">
-            <img className="image" src={data.url} alt="" />
-          </div>
-        )
-      } else {
-        let backImage = {backgroundImage: 'url(' + data.url + ')', height: divHeight + 'px'}
-        return(
-            <div className="img" style={backImage} />
-        )
+      if(index < 18) {
+        if(data.width === data.height && toggle === false) {
+          toggle = true;
+          return(
+            <div className="imgcontainer" onResize={this.resetWindowWidth} >
+              <img className="image" src={data.url} alt="" />
+            </div>
+          )
+        } else if(data.width === data.height && toggle === true) {
+          return(
+            <div className="imgcontainer">
+              <img className="image" src={data.url} alt="" />
+            </div>
+          )
+        } else {
+          let backImage = {backgroundImage: 'url(' + data.url + ')', height: divHeight + 'px'}
+          return(
+              <div className="img" style={backImage} />
+          )
+        }
       }
     })
 
-    // const imageRowOne = this.state.images.length === 0 ? '' : this.state.images.map((data, index) => {
-    //   if(index < 6) {
-    //     if(data.width === data.height) {
-    //       return(
-    //         <div className="imgcontainer">
-    //           <img className="image" src={data.url} alt="" />
-    //         </div>
-    //       )
-    //     } else {
-    //       let backImage = {backgroundImage: 'url(' + data.url + ')'}
-    //       return(
-    //           <div className="img" style={backImage} />
-    //       )
-    //     }
-    //   }
-    //   return ''
-    // })
-    // const imageRowTwo = this.state.images.length === 0 ? '' : this.state.images.map((data, index) => {
-    //   if(index >= 6 && index < 12) {
-    //     if(data.width === data.height) {
-    //       return(
-    //         <div className="imgcontainer">
-    //           <img className="image" src={data.url} alt="" />
-    //         </div>
-    //       )
-    //     } else {
-    //       // return(
-    //       //   <div className="imgcontainersquared">
-    //       //     <img className="imagesquared" src={data.url} />
-    //       //   </div>
-    //       // )
-    //       let backImage = {backgroundImage: 'url(' + data.url + ')'}
-    //       return(
-    //           <div className="img" style={backImage} />
-    //       )
-    //     }
-    //   }
-    //   return ''
-    // })
-    // const imageRowThree = this.state.images.length === 0 ? '' : this.state.images.map((data, index) => {
-    //   if(index >= 12 && index < 18) {
-    //     if(data.width === data.height) {
-    //       return(
-    //         <div className="imgcontainer">
-    //           <img className="image" src={data.url} alt="" />
-    //         </div>
-    //       )
-    //     } else {
-    //       let backImage = {backgroundImage: 'url(' + data.url + ')'}
-    //       return(
-    //           <div className="img" style={backImage} />
-    //       )
-    //     }
-    //   }
-    //   return ''
-    // })
-    // const imageRowFour = this.state.images.length === 0 ? '' : this.state.images.map((data, index) => {
-    //   if(index >= 18 && index < 24) {
-    //     if(data.width === data.height) {
-    //       return(
-    //         <div className="imgcontainer">
-    //           <img className="image" src={data.url} alt="" />
-    //         </div>
-    //       )
-    //     } else {
-    //       let backImage = {backgroundImage: 'url(' + data.url + ')'}
-    //       return(
-    //           <div className="img" style={backImage} />
-    //       )
-    //     }
-    //   }
-    //   return ''
-    // })
     return(
       <div>
         <div className="topborder"></div>
         <div className="imageRow">
           {backSplash}
         </div>
-        {/*<div className="imageRow">
-          {imageRowOne}
-        </div>
-        <div className="imageRow">
-          {imageRowTwo}
-        </div>
-        <div className="imageRow">
-          {imageRowThree}
-        </div>*/}
-        {/*<div className="imageRow">
-          {imageRowFour}
-        </div> */}
         <div className="bodystart">
           <MainBody />
         </div>

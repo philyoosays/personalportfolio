@@ -31,6 +31,7 @@
   height: 16.6%;
   width: 100vw;
   background: black;
+  flex: wrap;
 }
 
 .topborder {
@@ -40,7 +41,7 @@
   width: 100%;
   position: absolute;
   display: flex;
-  top: -25%;
+  top: -30%;
   z-index: 3;
 }
 
@@ -51,7 +52,7 @@
   width: 100%;
   position: absolute;
   display: flex;
-  bottom: -15%;
+  top: 82%;
   z-index: 3;
 }
 
@@ -72,7 +73,7 @@
   display: inline-block;
   position: absolute;
   float: right;
-  bottom: 150px;
+  top: -80%;
   right: 50px;
   font-size: 120px;
 }
@@ -88,7 +89,7 @@
 .img {
   display: inline-block;
   width:  16.6%;
-  height: 200px;
+  height: 16.6%;
   background-position: 50% 50%;
   background-repeat:   no-repeat;
   background-size:     cover;
@@ -100,72 +101,43 @@
   width: 100%;
   background: white;
   position: absolute;
-  bottom: -80%;
+  top: 110%;
   z-index: 10;
 }
 
-.footer {
-  position: relative;
-  bottom: 0px;
-  text-align: center;
-  margin-bottom: 30px;
-  font-weight: 300;
-}
-
-.footcontainer {
-  display: block;
-  z-index: 20;
-  position: relative;
-  bottom: 0px;
-  width: 60%;
-  margin: 0 auto;
-}
-
 @media(max-width: 1400px) {
-  .topborder {
-    top: -33%;
+  .bodystart {
+    top: 110%;
   }
 
   .bottomborder {
-    bottom: -20%;
-  }
-
-  .bodystart {
-    bottom: -100%;
+    top: 80%;
   }
 }
 
 @media(max-width: 1350px) {
-  .topborder {
+/*  .topborder {
     top: -33%;
-  }
+  }*/
 
   .bottomborder {
-    bottom: -15%;
+    top: 75%;
   }
 
-  .bodystart {
+/*  .bodystart {
     bottom: -90%;
-  }
+  }*/
 }
 
 @media(max-width: 1260px) {
-  .topborder {
-    top: -40%;
-  }
-
   .bottomborder {
-    bottom: -10%;
-  }
-
-  .bodystart {
-    bottom: -80%;
+    top: 70%;
   }
 
   .myname {
-    right: 1%;
+    right: 2%;
     font-size: 110px;
-    bottom: 160px;
+    top: -72%;
   }
 
   .descriptcontainer {
@@ -175,30 +147,59 @@
 
 @media(max-width: 1115px) {
   .topborder {
-    top: -33%;
+    top: -32%;
   }
 
   .bottomborder {
-    bottom: -5%;
+    top: 65%;
   }
 
   .bodystart {
-    bottom: -80%;
+    top: 90%;
   }
 }
 
 @media(max-width: 825px) {
-  .topborder {
-    top: -33%;
-  }
-
   .bottomborder {
-    bottom: 3%;
+    top: 60%;
   }
 
   .bodystart {
-    bottom: -70%;
+    top: 85%;
   }
 }
+
+@media(max-width: 450px) {
+  .bottomborder {
+    top: 55%;
+  }
+
+  .myname {
+    line-height: 85px;
+  }
+
+  .descriptcontainer {
+    line-height: 5px;
+    right: 7%;
+  }
+
+  .img {
+    height: 70px;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

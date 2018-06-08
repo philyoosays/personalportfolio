@@ -6,8 +6,11 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      images: []
+      images: [],
+      windowWidth: 0,
+      windowHeight: 0
     }
+    this.resetWindowWidth = this.resetWindowWidth.bind(this)
   }
 
   componentWillMount() {
@@ -23,69 +26,99 @@ class App extends React.Component {
             }
           })
           this.setState({
-            images: theImages
+            images: theImages,
+            windowWidth: window.innerWidth
           })
         })
   }
 
+  resetWindowWidth() {
+    this.setState({
+      windowWidth: window.innerWidth
+    })
+  }
+
   render() {
-    // Flex wrap and give it a width 16.6%
-    const imageRowOne = this.state.images.length === 0 ? '' : this.state.images.map((data, index) => {
-      if(index < 6) {
-        if(data.width === data.height) {
-          return(
-            <div className="imgcontainer">
-              <img className="image" src={data.url} alt="" />
-            </div>
-          )
-        } else {
-          let backImage = {backgroundImage: 'url(' + data.url + ')'}
-          return(
-              <div className="img" style={backImage} />
-          )
-        }
+    let toggle = false;
+    const divHeight = (this.state.windowWidth * .166)
+    const backSplash = this.state.images.length === 0 ? '' : this.state.images.map((data, index) => {
+      if(data.width === data.height && toggle === false) {
+        toggle = true;
+        return(
+          <div className="imgcontainer" onResize={this.resetWindowWidth} >
+            <img className="image" src={data.url} alt="" />
+          </div>
+        )
+      } else if(data.width === data.height && toggle === true) {
+        return(
+          <div className="imgcontainer">
+            <img className="image" src={data.url} alt="" />
+          </div>
+        )
+      } else {
+        let backImage = {backgroundImage: 'url(' + data.url + ')', height: divHeight + 'px'}
+        return(
+            <div className="img" style={backImage} />
+        )
       }
-      return ''
     })
-    const imageRowTwo = this.state.images.length === 0 ? '' : this.state.images.map((data, index) => {
-      if(index >= 6 && index < 12) {
-        if(data.width === data.height) {
-          return(
-            <div className="imgcontainer">
-              <img className="image" src={data.url} alt="" />
-            </div>
-          )
-        } else {
-          // return(
-          //   <div className="imgcontainersquared">
-          //     <img className="imagesquared" src={data.url} />
-          //   </div>
-          // )
-          let backImage = {backgroundImage: 'url(' + data.url + ')'}
-          return(
-              <div className="img" style={backImage} />
-          )
-        }
-      }
-      return ''
-    })
-    const imageRowThree = this.state.images.length === 0 ? '' : this.state.images.map((data, index) => {
-      if(index >= 12 && index < 18) {
-        if(data.width === data.height) {
-          return(
-            <div className="imgcontainer">
-              <img className="image" src={data.url} alt="" />
-            </div>
-          )
-        } else {
-          let backImage = {backgroundImage: 'url(' + data.url + ')'}
-          return(
-              <div className="img" style={backImage} />
-          )
-        }
-      }
-      return ''
-    })
+
+    // const imageRowOne = this.state.images.length === 0 ? '' : this.state.images.map((data, index) => {
+    //   if(index < 6) {
+    //     if(data.width === data.height) {
+    //       return(
+    //         <div className="imgcontainer">
+    //           <img className="image" src={data.url} alt="" />
+    //         </div>
+    //       )
+    //     } else {
+    //       let backImage = {backgroundImage: 'url(' + data.url + ')'}
+    //       return(
+    //           <div className="img" style={backImage} />
+    //       )
+    //     }
+    //   }
+    //   return ''
+    // })
+    // const imageRowTwo = this.state.images.length === 0 ? '' : this.state.images.map((data, index) => {
+    //   if(index >= 6 && index < 12) {
+    //     if(data.width === data.height) {
+    //       return(
+    //         <div className="imgcontainer">
+    //           <img className="image" src={data.url} alt="" />
+    //         </div>
+    //       )
+    //     } else {
+    //       // return(
+    //       //   <div className="imgcontainersquared">
+    //       //     <img className="imagesquared" src={data.url} />
+    //       //   </div>
+    //       // )
+    //       let backImage = {backgroundImage: 'url(' + data.url + ')'}
+    //       return(
+    //           <div className="img" style={backImage} />
+    //       )
+    //     }
+    //   }
+    //   return ''
+    // })
+    // const imageRowThree = this.state.images.length === 0 ? '' : this.state.images.map((data, index) => {
+    //   if(index >= 12 && index < 18) {
+    //     if(data.width === data.height) {
+    //       return(
+    //         <div className="imgcontainer">
+    //           <img className="image" src={data.url} alt="" />
+    //         </div>
+    //       )
+    //     } else {
+    //       let backImage = {backgroundImage: 'url(' + data.url + ')'}
+    //       return(
+    //           <div className="img" style={backImage} />
+    //       )
+    //     }
+    //   }
+    //   return ''
+    // })
     // const imageRowFour = this.state.images.length === 0 ? '' : this.state.images.map((data, index) => {
     //   if(index >= 18 && index < 24) {
     //     if(data.width === data.height) {
@@ -107,6 +140,9 @@ class App extends React.Component {
       <div>
         <div className="topborder"></div>
         <div className="imageRow">
+          {backSplash}
+        </div>
+        {/*<div className="imageRow">
           {imageRowOne}
         </div>
         <div className="imageRow">
@@ -114,7 +150,7 @@ class App extends React.Component {
         </div>
         <div className="imageRow">
           {imageRowThree}
-        </div>
+        </div>*/}
         {/*<div className="imageRow">
           {imageRowFour}
         </div> */}
@@ -125,7 +161,6 @@ class App extends React.Component {
           <h1 className="myname">PHIL YOO</h1>
           <div className="descriptcontainer">
             <h2 className="mydescript">FULL-STACK WEB DEVELOPER</h2>
-            <h2 className="mydescript">VIDEO PRODUCER</h2>
             <h2 className="mydescript">NYC</h2>
           </div>
         </div>

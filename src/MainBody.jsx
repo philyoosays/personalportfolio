@@ -3,6 +3,7 @@ import Nav from './Nav.jsx'
 import Projects from './Projects'
 import Contact from './Contact'
 import AboutMe from './AboutMe'
+import Footer from './Footer'
 import './App.css'
 
 import gastack from './screencaps/gastack.png'
@@ -21,7 +22,7 @@ export default class MainBody extends React.Component {
           desc: 'I found that students are intimidated by Stack Overflow because usually it\'s pros talking to pros and students would never ask questions so I made a student focused internal version of Stack Overflow for General Assembly students.',
           tech: 'This site features a vector-based search, WYSIWYG editor, code snippets, comment voting, authentication and authorization. It is EJS rendering for the front, PostgreSQL, Node.js/Express.js on the back.',
           link: 'http://gastack.com',
-          github: 'https://github.com/philyoosays/gastack',
+          github: 'https://github.com/philyoosays/gastac',
           thumb: gastack,
         },
         {
@@ -91,10 +92,7 @@ export default class MainBody extends React.Component {
         <div>
           {toShow}
         </div>
-        <section className="footcontainer">
-          <hr />
-          <p className="footer">Made with React.js by Phil Yoo 2018</p>
-        </section>
+        <Footer nav={this.state.navselection} />
       </div>
     );
   }

@@ -3,7 +3,7 @@
   height: 60px;
   margin: 0 auto;
   text-align: center;
-  border-bottom: 2px solid silver;
+  border-bottom: 2px solid black;
   /*border: 2px solid red;*/
   vertical-align: text-top;
 }
@@ -19,12 +19,18 @@
 
 p.navitemselected {
   border-bottom: 2px solid white;
-  border-left: 2px solid silver;
-  border-right: 2px solid silver;
-  border-top: 2px solid silver;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  border-top: 2px solid black;
+/*  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;*/
   margin: 20px 58px;
+  /*filter: drop-shadow(16px 16px 10px black);
+  background: white;*/
+}
+
+.header > a {
+  color: black;
 }
 
 @media(max-width: 990px) {

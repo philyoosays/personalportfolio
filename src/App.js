@@ -29,6 +29,7 @@ class App extends React.Component {
   }
 
   render() {
+    // Flex wrap and give it a width 16.6%
     const imageRowOne = this.state.images.length === 0 ? '' : this.state.images.map((data, index) => {
       if(index < 6) {
         if(data.width === data.height) {
@@ -104,6 +105,7 @@ class App extends React.Component {
     })
     return(
       <div>
+      <div>
         <div className="topborder"></div>
         <div className="imageRow">
           {imageRowOne}
@@ -128,6 +130,8 @@ class App extends React.Component {
             <h2 className="mydescript">NYC</h2>
           </div>
         </div>
+      </div>
+      <p className="footer">Made with React by Phil Yoo 2018</p>
       </div>
     );
   }

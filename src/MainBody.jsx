@@ -22,7 +22,7 @@ export default class MainBody extends React.Component {
           desc: 'I found that students are intimidated by Stack Overflow because usually it\'s pros talking to pros and students would never ask questions so I made a student focused internal version of Stack Overflow for General Assembly students.',
           tech: 'This site features a vector-based search, WYSIWYG editor, code snippets, comment voting, authentication and authorization. It is EJS rendering for the front, PostgreSQL, Node.js/Express.js on the back.',
           link: 'http://gastack.com',
-          github: 'https://github.com/philyoosays/gastac',
+          github: 'https://github.com/',
           thumb: gastack,
         },
         {
@@ -66,14 +66,12 @@ export default class MainBody extends React.Component {
   }
 
   zoomMaker(e) {
-    console.log(e)
     this.setState({
       mouseX: e.clientX,
       mouseY: e.clientY,
       pageX: e.pageX,
       pageY: e.pageY
     })
-    console.log('backpostion', this.state.backposition)
   }
 
   render() {

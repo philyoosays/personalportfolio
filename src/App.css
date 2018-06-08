@@ -43,6 +43,7 @@
   display: flex;
   top: -30%;
   z-index: 3;
+  /*border: 2px solid blue;*/
 }
 
 .bottomborder {
@@ -52,8 +53,9 @@
   width: 100%;
   position: absolute;
   display: flex;
-  top: 82%;
+  /*top: 82%;*/
   z-index: 3;
+  /*border: 2px solid red;*/
 }
 
 .shade {
@@ -101,17 +103,13 @@
   width: 100%;
   background: white;
   position: absolute;
-  top: 110%;
+  /*top: 110%;*/
   z-index: 10;
 }
 
 @media(max-width: 1400px) {
-  .bodystart {
-    top: 110%;
-  }
+  .topborder {
 
-  .bottomborder {
-    top: 80%;
   }
 }
 
@@ -120,9 +118,9 @@
     top: -33%;
   }*/
 
-  .bottomborder {
+/*  .bottomborder {
     top: 75%;
-  }
+  }*/
 
 /*  .bodystart {
     bottom: -90%;
@@ -130,9 +128,9 @@
 }
 
 @media(max-width: 1260px) {
-  .bottomborder {
+/*  .bottomborder {
     top: 70%;
-  }
+  }*/
 
   .myname {
     right: 2%;
@@ -145,35 +143,14 @@
   }
 }
 
-@media(max-width: 1115px) {
-  .topborder {
-    top: -32%;
-  }
-
-  .bottomborder {
-    top: 65%;
-  }
-
-  .bodystart {
-    top: 90%;
-  }
-}
-
-@media(max-width: 825px) {
-  .bottomborder {
-    top: 60%;
-  }
-
-  .bodystart {
-    top: 85%;
+@media(max-width: 500px) {
+  .myname {
+    font-size: 90px;
+    top: -150px;
   }
 }
 
 @media(max-width: 450px) {
-  .bottomborder {
-    top: 55%;
-  }
-
   .myname {
     line-height: 85px;
   }
@@ -182,13 +159,23 @@
     line-height: 5px;
     right: 7%;
   }
-
-  .img {
-    height: 70px;
-  }
-
 }
 
+@media(max-width: 420px) {
+  .myname {
+    font-size: 60px;
+    top: -110px;
+  }
+
+  .descriptcontainer {
+    font-size: 13px;
+    right: 10px;
+  }
+
+  .topborder {
+    top: -45%;
+  }
+}
 
 
 

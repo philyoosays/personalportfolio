@@ -73,4 +73,15 @@ p.navitemselected {
   }
 }
 
+@media(max-width: 380px) {
+  .navtext {
+    margin: 0;
+    padding: 18px 10px;
+  }
+
+  p.navitemselected {
+    margin: 6px 5px;
+  }
+}
+
 

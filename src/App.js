@@ -17,7 +17,6 @@ class App extends React.Component {
     fetch(`https://api.instagram.com/v1/users/self/media/recent/?access_token=${process.env.REACT_APP_INSTAGRAM}`)
       .then(response => response.json())
         .then(data => {
-          console.log('API Data: ', data)
           let theImages = []
           data.data.forEach((data, index) => {
             let apiImages = data.images.low_resolution;
@@ -63,18 +62,23 @@ class App extends React.Component {
           )
         }
       }
+      return '';
     })
 
+    const bottomPos = {top: divHeight * 2.7}
+    const bodStart = {top: divHeight * 3.8}
+    const topPos = {top: window.innerWidth > 700 ? '-35%' :
+      window.innerWidth < 700 && window.innerWidth > 400 ? '-38%' : '-43%'}
     return(
       <div>
-        <div className="topborder"></div>
+        <div className="topborder" style={topPos}></div>
         <div className="imageRow">
           {backSplash}
         </div>
-        <div className="bodystart">
+        <div className="bodystart" style={bodStart}>
           <MainBody />
         </div>
-        <div className="bottomborder">
+        <div className="bottomborder" style={bottomPos}>
           <h1 className="myname">PHIL YOO</h1>
           <div className="descriptcontainer">
             <h2 className="mydescript">FULL-STACK WEB DEVELOPER</h2>

@@ -51,3 +51,25 @@ p.description {
   width: 70%;
   margin: 0 auto;
 }
+
+@media(max-width: 1200px) {
+  .flexcontainer {
+    display: block;
+  }
+
+  .projectcontainer, .projectimgcontainer {
+    display: block;
+  }
+
+  .projectimg:hover {
+    transform: scale(1);
+  }
+
+  .projectimgcontainer {
+    margin: 0 auto;
+  }
+}
+
+@media(hover: hover) {
+
+}

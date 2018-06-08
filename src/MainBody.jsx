@@ -91,6 +91,10 @@ export default class MainBody extends React.Component {
         <div>
           {toShow}
         </div>
+        <section className="footcontainer">
+          <hr />
+          <p className="footer">Made with React.js by Phil Yoo 2018</p>
+        </section>
       </div>
     );
   }

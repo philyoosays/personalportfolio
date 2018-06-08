@@ -22,6 +22,7 @@ export default function Projects(props) {
               src={item.thumb}
               className="projectimg"
               onMouseMove={(e) => {props.makeZoom(e)}}
+              alt=''
             />
           </div>
         </div>

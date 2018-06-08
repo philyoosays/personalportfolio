@@ -35,7 +35,7 @@ class App extends React.Component {
         if(data.width === data.height) {
           return(
             <div className="imgcontainer">
-              <img className="image" src={data.url} />
+              <img className="image" src={data.url} alt="" />
             </div>
           )
         } else {
@@ -52,7 +52,7 @@ class App extends React.Component {
         if(data.width === data.height) {
           return(
             <div className="imgcontainer">
-              <img className="image" src={data.url} />
+              <img className="image" src={data.url} alt="" />
             </div>
           )
         } else {
@@ -74,7 +74,7 @@ class App extends React.Component {
         if(data.width === data.height) {
           return(
             <div className="imgcontainer">
-              <img className="image" src={data.url} />
+              <img className="image" src={data.url} alt="" />
             </div>
           )
         } else {
@@ -86,25 +86,24 @@ class App extends React.Component {
       }
       return ''
     })
-    const imageRowFour = this.state.images.length === 0 ? '' : this.state.images.map((data, index) => {
-      if(index >= 18 && index < 24) {
-        if(data.width === data.height) {
-          return(
-            <div className="imgcontainer">
-              <img className="image" src={data.url} />
-            </div>
-          )
-        } else {
-          let backImage = {backgroundImage: 'url(' + data.url + ')'}
-          return(
-              <div className="img" style={backImage} />
-          )
-        }
-      }
-      return ''
-    })
+    // const imageRowFour = this.state.images.length === 0 ? '' : this.state.images.map((data, index) => {
+    //   if(index >= 18 && index < 24) {
+    //     if(data.width === data.height) {
+    //       return(
+    //         <div className="imgcontainer">
+    //           <img className="image" src={data.url} alt="" />
+    //         </div>
+    //       )
+    //     } else {
+    //       let backImage = {backgroundImage: 'url(' + data.url + ')'}
+    //       return(
+    //           <div className="img" style={backImage} />
+    //       )
+    //     }
+    //   }
+    //   return ''
+    // })
     return(
-      <div>
       <div>
         <div className="topborder"></div>
         <div className="imageRow">
@@ -119,11 +118,11 @@ class App extends React.Component {
         {/*<div className="imageRow">
           {imageRowFour}
         </div> */}
-        <h1 className="myname">PHIL YOO</h1>
         <div className="bodystart">
           <MainBody />
         </div>
         <div className="bottomborder">
+          <h1 className="myname">PHIL YOO</h1>
           <div className="descriptcontainer">
             <h2 className="mydescript">FULL-STACK WEB DEVELOPER</h2>
             <h2 className="mydescript">VIDEO PRODUCER</h2>
@@ -131,11 +130,8 @@ class App extends React.Component {
           </div>
         </div>
       </div>
-      <p className="footer">Made with React by Phil Yoo 2018</p>
-      </div>
     );
   }
 }
-
 
 export default App;

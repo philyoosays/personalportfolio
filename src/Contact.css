@@ -34,3 +34,19 @@ a {
   text-decoration: none;
 }
 
+@media(max-width: 1020px) {
+  .contactcontainer {
+    width: 70%;
+    /*border: 2px solid red;*/
+  }
+
+  .contactheader {
+    width: 40%;
+    /*border: 2px solid blue;*/
+  }
+
+  .contacttext {
+    /*border: 2px solid lime;*/
+    width: 50%;
+  }
+}

@@ -30,7 +30,7 @@
   height: 100px;
 }*/
 
-@media(max-width: 750px) {
+@media(max-width: 800px) {
   .fleximage {
     height: 75px;
   }

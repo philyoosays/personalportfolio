@@ -4,7 +4,13 @@ import './Projects.css';
 export default function Projects(props) {
   // {'transform-origin': ((e.pageX - $(this).offset().left) / $(this).width()) * 100 + '% ' + ((e.pageY - $(this).offset().top) / $(this).height()) * 100 +'%'}
   // const whatever = ((props.pageX - props.mouseX) /
+  console.log(props)
   const projects = props.projects.map(item => {
+    if(item.tech.hasOwnProperty('list')) {
+      let list = item.tech.list.forEach(data => {
+        return (<li>data</li>)
+      })
+    }
     return(
       <div className="maincontainer">
         <div className="header">
@@ -16,7 +22,8 @@ export default function Projects(props) {
             <h3>Summary</h3>
             <p className="description">{item.desc}</p>
             <h3>Tech</h3>
-            <p className="description">{item.tech}</p>
+            <p className="description">{item.tech.text}</p>
+            <ul>{projects}</ul>
             <a href={item.github}>Github</a>
           </div>
           <div className="projectimgcontainer">

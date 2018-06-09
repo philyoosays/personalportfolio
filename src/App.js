@@ -10,7 +10,7 @@ class App extends React.Component {
       windowWidth: 0,
       windowHeight: 0
     }
-    this.resetWindowWidth = this.resetWindowWidth.bind(this)
+    this.updateWindowDim = this.updateWindowDim.bind(this)
   }
 
   componentWillMount() {
@@ -29,29 +29,27 @@ class App extends React.Component {
             windowWidth: window.innerWidth
           })
         })
+        this.updateWindowDim()
   }
 
-  resetWindowWidth() {
+  componentDidMount() {
+    window.addEventListener('resize', this.updateWindowDim)
+  }
+
+  updateWindowDim() {
     this.setState({
-      windowWidth: window.innerWidth
+      windowWidth: window.innerWidth,
+      windowHeight: window.innerHeight
     })
   }
 
   render() {
-    let toggle = false;
     const divHeight = (this.state.windowWidth * .166)
     const backSplash = this.state.images.length === 0 ? '' : this.state.images.map((data, index) => {
       if(index < 18) {
-        if(data.width === data.height && toggle === false) {
-          toggle = true;
+        if(data.width === data.height) {
           return(
-            <div className="imgcontainer" onResize={this.resetWindowWidth} >
-              <img className="image" src={data.url} alt="" />
-            </div>
-          )
-        } else if(data.width === data.height && toggle === true) {
-          return(
-            <div className="imgcontainer">
+            <div className="imgcontainer" >
               <img className="image" src={data.url} alt="" />
             </div>
           )
@@ -66,9 +64,14 @@ class App extends React.Component {
     })
 
     const bottomPos = {top: divHeight * 2.7}
-    const bodStart = {top: divHeight * 3.8}
-    const topPos = {top: window.innerWidth > 700 ? '-35%' :
-      window.innerWidth < 700 && window.innerWidth > 400 ? '-38%' : '-43%'}
+    const bodStart = {top: this.state.windowWidth > 600 ?
+                          (this.state.windowWidth / 10 + '%') :
+                          (this.state.windowWidth / 8 + '%')}
+    // const bodStart = {top: this.state.windowWidth >= 1000 ?
+    //                       this.state.windowHeight :
+    //                       this.state.windowHeight * .8}
+    const topPos = {top: this.state.windowWidth > 700 ? '-35%' :
+      window.innerWidth < 700 && window.innerWidth > 400 ? '-38%' : '-44%'}
     return(
       <div>
         <div className="topborder" style={topPos}></div>
@@ -76,7 +79,10 @@ class App extends React.Component {
           {backSplash}
         </div>
         <div className="bodystart" style={bodStart}>
-          <MainBody />
+          <MainBody
+            width={this.state.windowWidth}
+            height={this.state.windowHeight}
+          />
         </div>
         <div className="bottomborder" style={bottomPos}>
           <h1 className="myname">PHIL YOO</h1>

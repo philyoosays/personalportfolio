@@ -107,26 +107,6 @@
   z-index: 10;
 }
 
-@media(max-width: 1400px) {
-  .topborder {
-
-  }
-}
-
-@media(max-width: 1350px) {
-/*  .topborder {
-    top: -33%;
-  }*/
-
-/*  .bottomborder {
-    top: 75%;
-  }*/
-
-/*  .bodystart {
-    bottom: -90%;
-  }*/
-}
-
 @media(max-width: 1260px) {
 /*  .bottomborder {
     top: 70%;
@@ -177,6 +157,9 @@
   }
 }
 
+/*@media(max-width: 315px) {
+  .bodystart
+}*/
 
 
 

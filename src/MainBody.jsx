@@ -94,7 +94,7 @@ export default class MainBody extends React.Component {
         {
           name: 'Contact Resource Management (CRM) System',
           desc: 'This is a contact management system that sales teams and fundraising teams would use to track leads/donors, closed sales/donations, notes, campaigns, donor statistics, and Node.js/Express.js on the back',
-          tech: 'a \'fuzzy\' search, Zillow XML API for donor intel, donor giving statistics, EJS rendering for the front, PostgreSQL, Node.js/Express.js on the back',
+          tech: 'A \'fuzzy\' search, Zillow XML API for donor intel, donor giving statistics, EJS rendering for the front, PostgreSQL, Node.js/Express.js on the back',
           link: 'https://crm-unit02.herokuapp.com/search',
           github: 'https://github.com/philyoosays/CRM-Basic',
           thumb: crm,

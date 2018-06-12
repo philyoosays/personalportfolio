@@ -33,6 +33,10 @@ p.navitemselected {
   color: black;
 }
 
+.navcontainer > p:hover {
+  cursor: pointer;
+}
+
 @media(max-width: 990px) {
   .navtext {
     margin: 20px 35px;

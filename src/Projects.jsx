@@ -2,8 +2,7 @@ import React from 'react';
 import './Projects.css';
 
 export default function Projects(props) {
-  // {'transform-origin': ((e.pageX - $(this).offset().left) / $(this).width()) * 100 + '% ' + ((e.pageY - $(this).offset().top) / $(this).height()) * 100 +'%'}
-  // const whatever = ((props.pageX - props.mouseX) /
+
   const projects = props.projects.map(item => {
     return(
       <div className="maincontainer">

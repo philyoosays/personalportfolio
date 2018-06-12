@@ -88,6 +88,7 @@ class App extends React.Component {
           <h1 className="myname">PHIL YOO</h1>
           <div className="descriptcontainer">
             <h2 className="mydescript">FULL-STACK WEB DEVELOPER</h2>
+            <h2 className="mydescript">VIDEO PRODUCER</h2>
             <h2 className="mydescript">NYC</h2>
           </div>
         </div>

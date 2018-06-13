@@ -139,6 +139,14 @@
     line-height: 5px;
     right: 7%;
   }
+
+  .img {
+    opacity: .5;
+  }
+
+  .image {
+    opacity: .8;
+  }
 }
 
 @media(max-width: 420px) {

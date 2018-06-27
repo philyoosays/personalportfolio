@@ -10,7 +10,7 @@
     "react-scripts": "^1.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "REACT_APP_INSTAGRAM=1437392044.86034f9.8b736dc438dd4283b30e5ffd78e51785 react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"

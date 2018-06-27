@@ -15,105 +15,161 @@ export default class MainBody extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      navselection: 'nothing',
-      projects2:[
-        {
-          name: 'GA Stack',
-          desc: 'I found that students are intimidated by Stack Overflow because usually it\'s pros talking to pros and students would never ask questions so I made a student focused internal version of Stack Overflow for General Assembly students.',
-          tech: {
-            text: 'This site features',
-            list: [
-              'a vector search',
-              '16 tables',
-              'internal statistics tracking',
-              'WYSIWYG editor',
-              'code snippets',
-              'comment voting',
-              'authentication and authorization',
-              'EJS rendering for the front',
-              'PostgreSQL',
-              'Node.js/Express.js on the back'
-              ],
-            },
-          link: 'http://gastack.com',
-          github: 'https://github.com/',
-          thumb: gastack,
-        },
-        {
-          name: 'Contact Resource Management (CRM) System',
-          desc: 'This is a contact management system that sales teams and fundraising teams would use to track leads/donors, closed sales/donations, notes, campaigns, and donor statistics.',
-          tech: {
-            text: 'This site features',
-            list: [
-              'a \'fuzzy\' search',
-              'Zillow XML API for donor intel',
-              'donor giving statistics',
-              'EJS rendering for the front',
-              'PostgreSQL',
-              'Node.js/Express.js on the back'
-              ]
-            },
-          link: 'https://crm-unit02.herokuapp.com/search',
-          github: 'https://github.com/philyoosays/CRM-Basic',
-          thumb: crm,
-        },
-        {
-          name: 'Tetris',
-          desc: 'I submitted this as a unit project while attending General Assembly in order to try to challenge myself. It\'s just a replica of the original-style Tetris',
-          tech: {
-            text: 'This was written with JQuery.',
-            list: [
-              'The main js file stores game data to the DOM',
-              'The script2.js file runs all game data virtually and just renders to the DOM',
-              ]
-            },
-          link: 'http://philyoo-tetris.surge.sh/',
-          github: 'https://github.com/philyoosays/tetris',
-          thumb: tetris,
-        },
-        {
-          name: 'Old-school Snake',
-          desc: 'Just because I thought it\'d be fun.',
-          tech: {
-            text: 'Simple game written with JQuery.'
-          },
-          link: 'http://philyoo-snake.surge.sh/',
-          github: 'https://github.com/philyoosays/snake',
-          thumb: snake,
-        }
-      ],
+      navselection: 'projects',
+      // projects2:[
+      //   {
+      //     name: 'GA Stack',
+      //     desc: 'I found that students are intimidated by Stack Overflow because usually it\'s pros talking to pros and students would never ask questions so I made a student focused internal version of Stack Overflow for General Assembly students.',
+      //     tech: {
+      //       text: 'This site features',
+      //       list: [
+      //         'a vector search',
+      //         '16 tables',
+      //         'internal statistics tracking',
+      //         'WYSIWYG editor',
+      //         'code snippets',
+      //         'comment voting',
+      //         'authentication and authorization',
+      //         'EJS rendering for the front',
+      //         'PostgreSQL',
+      //         'Node.js/Express.js on the back'
+      //         ],
+      //       },
+      //     link: 'http://gastack.com',
+      //     github: 'https://github.com/',
+      //     thumb: gastack,
+      //   },
+      //   {
+      //     name: 'Contact Resource Management (CRM) System',
+      //     desc: 'This is a contact management system that sales teams and fundraising teams would use to track leads/donors, closed sales/donations, notes, campaigns, and donor statistics.',
+      //     tech: {
+      //       text: 'This site features',
+      //       list: [
+      //         'a \'fuzzy\' search',
+      //         'Zillow XML API for donor intel',
+      //         'donor giving statistics',
+      //         'EJS rendering for the front',
+      //         'PostgreSQL',
+      //         'Node.js/Express.js on the back'
+      //         ]
+      //       },
+      //     link: 'https://crm-unit02.herokuapp.com/search',
+      //     github: 'https://github.com/philyoosays/CRM-Basic',
+      //     thumb: crm,
+      //   },
+      //   {
+      //     name: 'Tetris',
+      //     desc: 'I submitted this as a unit project while attending General Assembly in order to try to challenge myself. It\'s just a replica of the original-style Tetris',
+      //     tech: {
+      //       text: 'This was written with JQuery.',
+      //       list: [
+      //         'The main js file stores game data to the DOM',
+      //         'The script2.js file runs all game data virtually and just renders to the DOM',
+      //         ]
+      //       },
+      //     link: 'http://philyoo-tetris.surge.sh/',
+      //     github: 'https://github.com/philyoosays/tetris',
+      //     thumb: tetris,
+      //   },
+      //   {
+      //     name: 'Old-school Snake',
+      //     desc: 'Just because I thought it\'d be fun.',
+      //     tech: {
+      //       text: 'Simple game written with JQuery.'
+      //     },
+      //     link: 'http://philyoo-snake.surge.sh/',
+      //     github: 'https://github.com/philyoosays/snake',
+      //     thumb: snake,
+      //   }
+      // ],
       projects:[
         {
           name: 'GA Stack',
           desc: 'I found that students are intimidated by Stack Overflow because usually it\'s pros talking to pros and students would never ask questions so I made a student focused internal version of Stack Overflow for General Assembly students.',
           tech: 'This site features a vector search, 16 DB tables, internal statistics tracking, a WYSIWYG editor, code snippets, comment voting, authentication and authorization, several JSON APIs for various features, EJS rendering for the front, PostgreSQL, and Node.js/Express.js on the back',
+          highlights: [
+            'Full vector text search',
+            'WYSIWYG editor',
+            'Code snippets',
+            'Internal stats tracking',
+            'Comment voting',
+            'PostgreSQL',
+            'Node.js/Express.js',
+            'Sessions for auth',
+            'EJS rendering',
+            '3rd Party JSON APIs'
+          ],
           link: 'http://gastack.com',
-          github: 'https://github.com/',
+          github: 'https://github.com/philyoosays/gastack',
           thumb: gastack,
+          note: '',
+          zoom: true,
+        },
+        {
+          name: 'WebSockets Game',
+          desc: 'A multiplayer game where everyone gets a set of buttons but everyone has different buttons. Everyone gets an instruction to complete in 10 seconds but the instruction is likely not for your own buttons. So you need to communicate with the other players to complete each instruction.',
+          tech: 'This was written in React Native, Node/Express, and uses Websockets for client to server communication.',
+          highlights: [
+            'React Native',
+            'WebSockets',
+            'Node.js',
+            'Express.js'
+          ],
+          link: '',
+          github: 'https://github.com/philyoosays/socketsgame',
+          thumb: '',
+          note: '***Currently not deployed but all functionality is working.',
+          zoom: false,
         },
         {
           name: 'Contact Resource Management (CRM) System',
           desc: 'This is a contact management system that sales teams and fundraising teams would use to track leads/donors, closed sales/donations, notes, campaigns, donor statistics, and Node.js/Express.js on the back',
           tech: 'A \'fuzzy\' search, Zillow XML API for donor intel, donor giving statistics, EJS rendering for the front, PostgreSQL, Node.js/Express.js on the back',
+          highlights: [
+            'Fuzzy search',
+            'XML API for donor intel',
+            'Contribution stats',
+            'PostgreSQL',
+            'Node.js/Express.js',
+            'EJS rendering'
+          ],
           link: 'https://crm-unit02.herokuapp.com/search',
           github: 'https://github.com/philyoosays/CRM-Basic',
           thumb: crm,
+          note: '',
+          zoom: true,
         },
         {
           name: 'Tetris',
           desc: 'I submitted this as a unit project while attending General Assembly in order to try to challenge myself. It\'s just a replica of the original-style Tetris',
           tech: 'This was written with JQuery. The main js file stores game data to the DOM and the script2.js file runs all game data virtually and just renders to the DOM',
+          highlights: [
+            'jQuery',
+            'Javascript',
+            'HTML',
+            'CSS'
+          ],
           link: 'http://philyoo-tetris.surge.sh/',
           github: 'https://github.com/philyoosays/tetris',
           thumb: tetris,
+          note: '',
+          zoom: false,
         },
         {
           name: 'Old-school Snake',
           desc: 'Just because I thought it\'d be fun.',
           tech: 'Simple game written with JQuery.',
+          highlights: [
+            'jQuery',
+            'Javascript',
+            'HTML',
+            'CSS'
+          ],
           link: 'http://philyoo-snake.surge.sh/',
           github: 'https://github.com/philyoosays/snake',
           thumb: snake,
+          note: '',
+          zoom: false,
         }
       ],
       mouseX: 0,

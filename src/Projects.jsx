@@ -7,8 +7,8 @@ export default function Projects(props) {
     return(
       <div className="maincontainer">
         <div className="header">
-          <a href={item.link} target="_blank"><h1 className="projectheader">{item.name}</h1></a>
-          <a href={item.link} target="_blank"><p className="projectlink">{item.link}</p></a>
+          <a href={item.link} target="_blank" rel="noopener noreferrer"><h1 className="projectheader">{item.name}</h1></a>
+          <a href={item.link} target="_blank" rel="noopener noreferrer"><p className="projectlink">{item.link}</p></a>
         </div>
         <div className="flexcontainer">
           <div className="projectcontainer">
@@ -18,7 +18,7 @@ export default function Projects(props) {
             <p className="description">{item.tech}</p>
             <div className="github">
               <div className="arrow" />
-              <a href={item.github} target="_blank">Github Repo</a>
+              <a href={item.github} target="_blank" rel="noopener noreferrer">Github Repo</a>
             </div>
           </div>
           <div className="projectimgcontainer">

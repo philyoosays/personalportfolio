@@ -5,7 +5,7 @@
 }
 
 .blurb {
-  width: 70%;
+  width: 90%;
   margin: 0 auto;
   text-align: center;
 }
@@ -31,4 +31,8 @@
 
 .fleximage {
   height: 100px;
+}
+
+.headshot {
+  width: 50%;
 }

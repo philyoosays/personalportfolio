@@ -1,8 +1,10 @@
 import React from 'react';
 
+import Contact from './Contact'
 import Skills from './Skills'
 import './AboutMe.css';
 
+import headShot from './screencaps/phil_headshot.jpg'
 import jsLogo from './icons/javascript.svg'
 import jQueryLogo from './icons/jquery.png'
 import nodeLogo from './icons/node.png'
@@ -22,9 +24,14 @@ export default function AboutMe() {
     <div className="container">
       <section className="blurb">
         <h2 className="header">I am a Full-Stack Developer</h2>
+        <img src={headShot} alt="phils-headshot" className="headshot" />
         <p className="maintext">
-          I crave challenges, work fast, and love building awesome things.
+          I'm obsessed with puzzles and work aggressively for solutions.
         </p>
+        <p className="maintext">
+          I'm in NYC if you want to build something awesome together.
+        </p>
+        <Contact />
       </section>
       <section className="skills">
         <h3>SKILLS</h3>

@@ -98,6 +98,19 @@
   opacity: 0.3;
 }
 
+.noimg {
+  display: block;
+  height: 30vh;
+  width: 100%;
+  background: black;
+  color: white;
+}
+
+.noimg > p {
+  position: relative;
+  top: 20%;
+}
+
 .bodystart {
   height: 600px;
   width: 100%;
@@ -120,6 +133,22 @@
 
   .descriptcontainer {
     right: 10%;
+  }
+}
+
+@media(max-width: 1005px) {
+  .noimg {
+    height: 25vh;
+  }
+}
+
+@media(max-width: 600px) {
+  .noimg {
+    height: 20vh;
+  }
+
+  .noimg > p {
+    top: 50%;
   }
 }
 

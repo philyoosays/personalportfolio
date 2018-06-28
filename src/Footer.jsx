@@ -8,7 +8,7 @@ export default function Footer(props) {
       <hr />
       <p className="footer">Made with React.js by Phil Yoo 2018</p>
     </section>) :
-    (<section className="footcontainer bufferthree">
+    (<section className="footcontainer bufferone">
       <hr />
       <p className="footer">Made with React.js by Phil Yoo 2018</p>
     </section>)

@@ -10,15 +10,15 @@ export default function Nav(props) {
     props.selected === 'about' ?
       <p className="navtext navitemselected" onClick={() => {props.changeNav('about')}}>About Me</p>
       : <p className="navtext navitem" onClick={() => {props.changeNav('about')}}>About Me</p>
-  let navContact =
-    props.selected === 'contact' ?
-      <p className="navtext navitemselected" onClick={() => {props.changeNav('contact')}}>Contact</p>
-      : <p className="navtext navitem" onClick={() => {props.changeNav('contact')}}>Contact</p>
+  let navInProgress =
+    props.selected === 'inprogress' ?
+      <p className="navtext navitemselected" onClick={() => {props.changeNav('inprogress')}}>In Progress</p>
+      : <p className="navtext navitem" onClick={() => {props.changeNav('inprogress')}}>In Progress</p>
   return(
     <div className="navcontainer">
       {navProject}
       {navAbout}
-      {navContact}
+      {navInProgress}
     </div>
   );
 }

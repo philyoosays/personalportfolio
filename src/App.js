@@ -45,23 +45,29 @@ class App extends React.Component {
 
   render() {
     const divHeight = (this.state.windowWidth * .166)
-    const backSplash = this.state.images.length === 0 ? '' : this.state.images.map((data, index) => {
-      if(index < 18) {
-        if(data.width === data.height) {
-          return(
-            <div className="imgcontainer" >
-              <img className="image" src={data.url} alt="" />
-            </div>
-          )
-        } else {
-          let backImage = {backgroundImage: 'url(' + data.url + ')', height: divHeight + 'px'}
-          return(
-              <div className="img" style={backImage} />
-          )
+    const backSplash = this.state.images.length === 0 ?
+      <div>
+        <div className="noimg" ><p>Instagram fetch isn't working</p></div>
+        <div className="noimg" />
+        <div className="noimg" />
+      </div>
+      : this.state.images.map((data, index) => {
+        if(index < 18) {
+          if(data.width === data.height) {
+            return(
+              <div className="imgcontainer" >
+                <img className="image" src={data.url} alt="" />
+              </div>
+            )
+          } else {
+            let backImage = {backgroundImage: 'url(' + data.url + ')', height: divHeight + 'px'}
+            return(
+                <div className="img" style={backImage} />
+            )
+          }
         }
-      }
-      return '';
-    })
+        return '';
+      })
 
     const bottomPos = {top: divHeight * 2.7}
     const bodStart = {top: this.state.windowWidth > 600 ?

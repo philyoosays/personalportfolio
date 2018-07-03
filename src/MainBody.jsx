@@ -125,6 +125,21 @@ export default class MainBody extends React.Component {
         note: '***Currently working to solve the one-click email (from clients own email) send of template email. Modern email security-wise, this is impossible but I am working on the work-arounds needed to make this work.',
         zoom: false,
       },
+      {
+        name: 'Minesweeper',
+        desc: 'Old-school Minesweeper. I made this because someone I know who was making minesweeper had a hard time solving the "click on whitespace clears adjacent whitespace" issue and I thought it\'d be a fun challenge',
+        tech: 'Written in vanilla JS. I solved the whitespace issue by adding an onClick function to empty spaces which clicks the spaces adjacent to it if they are also whitespaces.',
+        highlights: [
+          'Vanilla Javascript',
+          'HTML',
+          'CSS'
+        ]
+        link: 'http://philyoo-minesweeper.surge.sh/',
+        github: 'https://github.com/philyoosays/minesweeper',
+        thumb: '',
+        note: '***Most function is done, I just need to add scoring, flags, game reset, and other ancillary things to put a bow on top.',
+        zoom: false,
+      }
     ],
       mouseX: 0,
       mouseY: 0

@@ -133,7 +133,7 @@ export default class MainBody extends React.Component {
           'Vanilla Javascript',
           'HTML',
           'CSS'
-        ]
+        ],
         link: 'http://philyoo-minesweeper.surge.sh/',
         github: 'https://github.com/philyoosays/minesweeper',
         thumb: '',

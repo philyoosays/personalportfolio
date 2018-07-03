@@ -115,12 +115,11 @@ export default class MainBody extends React.Component {
         highlights: [
           'JSON Web Tokens',
           'React.js',
-          'Redux',
           'Node.js/Express.js',
           'PostgreSQL',
           '3rd Party API',
         ],
-        link: '',
+        link: 'https://emailwidget.herokuapp.com/form/1',
         github: 'https://github.com/philyoosays/emailwidget',
         thumb: '',
         note: '***Currently working to solve the one-click email (from clients own email) send of template email. Modern email security-wise, this is impossible but I am working on the work-arounds needed to make this work.',

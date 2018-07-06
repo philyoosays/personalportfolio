@@ -113,7 +113,7 @@ export default class MainBody extends React.Component {
     inprogress: [
       {
         name: 'Constituent Email Widget',
-        desc: 'A widget allowing non-profits to easily email their constituents while also collecting constituent information for relationship building and prospecting.',
+        desc: 'A widget allowing non-profits to easily email their constituents while also collecting constituent information for relationship building and prospecting.\n\rClients will be able to create new cutom campaigns through the admin cpanel, and download constituent data as CSVs.',
         tech: 'Written in React with a Node.js/Express.js backend with PostgreSQL for data storage. JSON Web Tokens for auth.',
         highlights: [
           'JSON Web Tokens',

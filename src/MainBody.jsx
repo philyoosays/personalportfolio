@@ -1,15 +1,18 @@
-import React from 'react'
-import Nav from './Nav.jsx'
-import Projects from './Projects'
-// import Contact from './Contact'
-import AboutMe from './AboutMe'
-import Footer from './Footer'
-import './App.css'
+import React from 'react';
+import Nav from './Nav.jsx';
+import Projects from './Projects';
+// import Contact from './Contact';
+import AboutMe from './AboutMe';
+import Footer from './Footer';
+import './App.css';
 
-import gastack from './screencaps/gastack.png'
-import crm from './screencaps/crm.png'
-import snake from './screencaps/snake.png'
-import tetris from './screencaps/tetris.png'
+import noImage from './screencaps/no_image_w_large.gif';
+import gastack from './screencaps/gastack.png';
+import crm from './screencaps/crm.png';
+import snake from './screencaps/snake.png';
+import tetris from './screencaps/tetris.png';
+import emailwidget from './screencaps/email_widget.png';
+import minesweeper from './screencaps/minesweeper.png';
 
 export default class MainBody extends React.Component {
   constructor(props) {
@@ -51,7 +54,7 @@ export default class MainBody extends React.Component {
           ],
           link: '',
           github: 'https://github.com/philyoosays/socketsgame',
-          thumb: '',
+          thumb: noImage,
           note: '***Currently not deployed but all functionality is working.',
           zoom: false,
         },
@@ -121,7 +124,7 @@ export default class MainBody extends React.Component {
         ],
         link: 'https://emailwidget.herokuapp.com/form/1',
         github: 'https://github.com/philyoosays/emailwidget',
-        thumb: '',
+        thumb: emailwidget,
         note: '***Currently working to solve the one-click email (from clients own email) send of template email. Modern email security-wise, this is impossible but I am working on the work-arounds needed to make this work.',
         zoom: false,
       },
@@ -136,7 +139,7 @@ export default class MainBody extends React.Component {
         ],
         link: 'http://philyoo-minesweeper.surge.sh/',
         github: 'https://github.com/philyoosays/minesweeper',
-        thumb: '',
+        thumb: minesweeper,
         note: '***Most function is done, I just need to add scoring, flags, game reset, and other ancillary things to put a bow on top.',
         zoom: false,
       }

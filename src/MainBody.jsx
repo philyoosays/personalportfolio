@@ -126,7 +126,7 @@ export default class MainBody extends React.Component {
         github: 'https://github.com/philyoosays/emailwidget',
         thumb: emailwidget,
         note: '***Currently working to solve the one-click email (from clients own email) send of template email. Modern email security-wise, this is impossible but I am working on the work-arounds needed to make this work.',
-        zoom: false,
+        zoom: true,
       },
       {
         name: 'Minesweeper',

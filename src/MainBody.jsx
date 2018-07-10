@@ -13,6 +13,7 @@ import snake from './screencaps/snake.png';
 import tetris from './screencaps/tetris.png';
 import emailwidget from './screencaps/email_widget.png';
 import minesweeper from './screencaps/minesweeper.png';
+import apologetics from './screencaps/apologetics_hub.png';
 
 export default class MainBody extends React.Component {
   constructor(props) {
@@ -111,6 +112,24 @@ export default class MainBody extends React.Component {
         }
       ],
     inprogress: [
+      {
+        name: 'Apologetics Hub',
+        desc: 'Geared toward non-profits who\'s supporter-base need to defend themselves using accurate assertions or need to disprove an in-correct opposing view, this site is a template for such non-profits to supply their supporters with an easy to search hub for the true-ness or false-ness of a claim.',
+        tech: 'Wirtten with React with a Node/Express backend with PostgreSQL for data storage. JSON Web Tokens for auth into an admin section with is basically a content management control panel.',
+        highlights: [
+          'JSON Web Tokens',
+          'React.js',
+          'React-Router',
+          'Node.js/Express.js',
+          'PostgreSQL',
+          'WYSIWYG editor'
+        ],
+        link: 'Not currently hosted',
+        github: 'https://github.com/philyoosays/apologetics_hub',
+        thumb: apologetics,
+        note: '***This is something I may want to sell so I might make the git repo private.',
+        zoom: false,
+      },
       {
         name: 'Constituent Email Widget',
         desc: 'A widget allowing non-profits to easily email their constituents while also collecting constituent information for relationship building and prospecting.\n\rClients will be able to create new custom campaigns through the admin cpanel, and download constituent data as CSVs.',

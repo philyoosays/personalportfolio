@@ -18,6 +18,7 @@ import psLogo from './icons/adobe_photoshop.png'
 import aiLogo from './icons/adobe_illustrator.png'
 import aeLogo from './icons/adobe_after_effects.png'
 import prLogo from './icons/adobe_premiere.png'
+import mongoDB from './icons/mongodb.png'
 
 export default function AboutMe() {
   return(
@@ -57,11 +58,11 @@ export default function AboutMe() {
           />
           <Skills
             labelone="PostgreSQL"
-            labeltwo=""
+            labeltwo="MongoDB"
             labelthree=""
             labelfour=""
             iconone={psqlLogo}
-            icontwo=""
+            icontwo={mongoDB}
             iconthree=""
             iconfour=""
           />

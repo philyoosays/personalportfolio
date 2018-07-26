@@ -124,7 +124,7 @@ export default class MainBody extends React.Component {
           'PostgreSQL',
           'WYSIWYG editor'
         ],
-        link: 'Not currently hosted',
+        link: 'https://apologetics-hub.herokuapp.com/',
         github: 'https://github.com/philyoosays/apologetics_hub',
         thumb: apologetics,
         note: '***This is something I may want to sell so I might make the git repo private.',

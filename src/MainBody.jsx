@@ -22,6 +22,24 @@ export default class MainBody extends React.Component {
       navselection: 'projects',
       projects:[
         {
+          name: 'Apologetics Hub',
+          desc: 'Geared toward non-profits who\'s supporter-base need to defend themselves using accurate assertions or need to disprove an in-correct opposing view, this site is a template for such non-profits to supply their supporters with an easy to search hub for the true-ness or false-ness of a claim.',
+          tech: 'Wirtten with React with a Node/Express backend with PostgreSQL for data storage. JSON Web Tokens for auth into an admin section with is basically a content management control panel.',
+          highlights: [
+            'JSON Web Tokens',
+            'React.js',
+            'React-Router',
+            'Node.js/Express.js',
+            'PostgreSQL',
+            'WYSIWYG editor'
+          ],
+          link: 'https://apologetics-hub.herokuapp.com/',
+          github: 'https://github.com/philyoosays/apologetics_hub',
+          thumb: apologetics,
+          note: '***This is something I may want to sell so I might make the git repo private.',
+          zoom: true,
+        },
+        {
           name: 'GA Stack',
           desc: 'I found that students are intimidated by Stack Overflow because usually it\'s pros talking to pros and students would never ask questions so I made a student focused internal version of Stack Overflow for General Assembly students.',
           tech: 'This site features a vector search, 16 DB tables, internal statistics tracking, a WYSIWYG editor, code snippets, comment voting, authentication and authorization, several JSON APIs for various features, EJS rendering for the front, PostgreSQL, and Node.js/Express.js on the back',
@@ -111,59 +129,74 @@ export default class MainBody extends React.Component {
           zoom: false,
         }
       ],
-    inprogress: [
-      {
-        name: 'Apologetics Hub',
-        desc: 'Geared toward non-profits who\'s supporter-base need to defend themselves using accurate assertions or need to disprove an in-correct opposing view, this site is a template for such non-profits to supply their supporters with an easy to search hub for the true-ness or false-ness of a claim.',
-        tech: 'Wirtten with React with a Node/Express backend with PostgreSQL for data storage. JSON Web Tokens for auth into an admin section with is basically a content management control panel.',
-        highlights: [
-          'JSON Web Tokens',
-          'React.js',
-          'React-Router',
-          'Node.js/Express.js',
-          'PostgreSQL',
-          'WYSIWYG editor'
-        ],
-        link: 'https://apologetics-hub.herokuapp.com/',
-        github: 'https://github.com/philyoosays/apologetics_hub',
-        thumb: apologetics,
-        note: '***This is something I may want to sell so I might make the git repo private.',
-        zoom: false,
-      },
-      {
-        name: 'Constituent Email Widget',
-        desc: 'A widget allowing non-profits to easily email their constituents while also collecting constituent information for relationship building and prospecting.\n\rClients will be able to create new custom campaigns through the admin cpanel, and download constituent data as CSVs.',
-        tech: 'Written in React with a Node.js/Express.js backend with PostgreSQL for data storage. JSON Web Tokens for auth. Users can download campaign data in CSV format.',
-        highlights: [
-          'JSON Web Tokens',
-          'React.js',
-          'Node.js/Express.js',
-          'PostgreSQL',
-          '3rd Party API',
-          'CSV data downloads'
-        ],
-        link: 'https://emailwidget.herokuapp.com/form/1',
-        github: 'https://github.com/philyoosays/emailwidget',
-        thumb: emailwidget,
-        note: '***Currently working to solve the one-click email (from clients own email) send of template email. Modern email security-wise, this is impossible but I am working on the work-arounds needed to make this work.',
-        zoom: true,
-      },
-      {
-        name: 'Minesweeper',
-        desc: 'Old-school Minesweeper. I made this because someone I know who was making minesweeper had a hard time solving the "click on whitespace clears adjacent whitespace" issue and I thought it\'d be a fun challenge',
-        tech: 'Written in vanilla JS. I solved the whitespace issue by adding an onClick function to empty spaces which clicks the spaces adjacent to it if they are also whitespaces.',
-        highlights: [
-          'Vanilla Javascript',
-          'HTML',
-          'CSS'
-        ],
-        link: 'http://philyoo-minesweeper.surge.sh/',
-        github: 'https://github.com/philyoosays/minesweeper',
-        thumb: minesweeper,
-        note: '***Most function is done, I just need to add scoring, flags, game reset, and other ancillary things to put a bow on top.',
-        zoom: false,
-      }
-    ],
+      inprogress: [
+        {
+          name: 'B2Devs',
+          desc: 'I want to find small businesses and non-profits that can\'t afford a developer, and I want to amass a list of newbie devs that need experience and something to put on a resume and connect them together. The devs get real experience, the businesses get work they couldn\'t afford done.',
+          tech: 'This is a React app that will eventually have a React Native build for mobile, database solution has not been selected yet but I\'m leaning towards MongoDB just for the practice. Back-end will be in Node.js/Express.js. HOWEVER, since I only have two views done, I\'m giving serious thought to just switching to Angular, just for the practice.',
+          highlights: [
+            'currently React.js',
+            'possibly Angular.js instead',
+            'JSON Web Tokens',
+            'possibly MongoDB',
+            'React Native post-MVP',
+          ],
+          link: 'Just started development.(updated 7/30)',
+          github: 'https://github.com/philyoosays/b2devs',
+          thumb: noImage,
+          note: '***Really considering a switch to Angular or VUE',
+          zoom: false,
+        },
+        {
+          name: 'Psych Meds MobileApp',
+          desc: 'When starting new medication, one thing that many people often do is go online to find other people\'s experiences on the same drug. This mobile app provides a list of medications and users can anonymously share what their experiences were na dread about what someone else went through. (This app was very recently conceived so nothing is really built yet)',
+          tech: 'React Native, with a Node.js/Express.js backend. Started with a PostgreSQL database, but will move to MongoDB for this project. JSON Web Tokens for auth.',
+          highlights: [
+            'React Native',
+            '3rd Party API',
+            'MongoDB',
+            'Node.js/Express.js',
+          ],
+          link: 'Recently conceptualized, will begin development soon.',
+          github: 'https://github.com/philyoosays/med-reviews-mobileapp.git',
+          thumb: noImage,
+          note: 'This app was very recently conceived so nothing is really built yet',
+          zoom: false,
+        },
+        {
+          name: 'Constituent Email Widget',
+          desc: 'A widget allowing non-profits to easily email their constituents while also collecting constituent information for relationship building and prospecting.\n\rClients will be able to create new custom campaigns through the admin cpanel, and download constituent data as CSVs.',
+          tech: 'Written in React with a Node.js/Express.js backend with PostgreSQL for data storage. JSON Web Tokens for auth. Users can download campaign data in CSV format.',
+          highlights: [
+            'JSON Web Tokens',
+            'React.js',
+            'Node.js/Express.js',
+            'PostgreSQL',
+            '3rd Party API',
+            'CSV data downloads'
+          ],
+          link: 'https://emailwidget.herokuapp.com/form/1',
+          github: 'https://github.com/philyoosays/emailwidget',
+          thumb: emailwidget,
+          note: '***Currently working to solve the one-click email (from clients own email) send of template email. Modern email security-wise, this is impossible but I am working on the work-arounds needed to make this work.',
+          zoom: true,
+        },
+        {
+          name: 'Minesweeper',
+          desc: 'Old-school Minesweeper. I made this because someone I know who was making minesweeper had a hard time solving the "click on whitespace clears adjacent whitespace" issue and I thought it\'d be a fun challenge',
+          tech: 'Written in vanilla JS. I solved the whitespace issue by adding an onClick function to empty spaces which clicks the spaces adjacent to it if they are also whitespaces.',
+          highlights: [
+            'Vanilla Javascript',
+            'HTML',
+            'CSS'
+          ],
+          link: 'http://philyoo-minesweeper.surge.sh/',
+          github: 'https://github.com/philyoosays/minesweeper',
+          thumb: minesweeper,
+          note: '***Most function is done, I just need to add scoring, flags, game reset, and other ancillary things to put a bow on top.',
+          zoom: false,
+        }
+      ],
       mouseX: 0,
       mouseY: 0
     }

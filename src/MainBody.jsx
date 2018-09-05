@@ -131,6 +131,45 @@ export default class MainBody extends React.Component {
       ],
       inprogress: [
         {
+          name: 'Point of Sales System',
+          desc: 'A restaurant POS with modern bells and whistles. The system will provide multiple options for managing the flow in the restaurant. Additional features are all modular and easy to add on.',
+          tech: 'This app has multiple front-end UIs all written in React. There will a customer facing view for self ordering, a wait staff/hostess/kitechen facing view for order processing, an owner facing view to display real-time restaurant data, a web-based ordering system, and a React-Native mobile app for mobile ordering. Websockets are utilized to keep all the open instances synced in real-time as well as internet-sourced orders.',
+          highlights: [
+            'multiple Node servers all working together and keeping each other synced',
+            'JSON web tokens',
+            'Websockets',
+            'PostgreSQL',
+            'React and React-Router',
+            'QR code based inventory management',
+            'Hostess view which integrates reservations, walk-ins, and auto combines to form a waitlist',
+            'Text message notifications for the waitlist',
+            'real-time reporting for P/L'
+          ],
+          link: 'Still in development and will not be hosted on-line',
+          github: '',
+          thumb: noImage,
+          note: 'This is being built with selling it in mind so the Github repo is private.',
+          zoom: false
+        },
+        {
+          name: 'Helios',
+          desc: 'A voice and text prompted simulated AI that can do nearly everything Amazon\'s Alexa can do, but it has an additonal section that tries to determine user intent, context, and purpose of the heard speech. This allows it to respond back with memories and experiences and can tell you stories. You can interrupt him, ask a question about a detail of a story, get your answer and then Helios will pick up where it left off.',
+          tech: 'Speech Recognition and Speech sythesis are the major parts. It keeps records of the things it says or are spoken to, and adds them into its bank of memories. In the end, the Helios System will comprise of multiple computers all working with each other, each with a specific purpose to provide a robust home management system.',
+          highlights: [
+            'Speech Recognition',
+            'Speech Synthesis',
+            'multiple languages',
+            'accepts voice and text commands',
+            'has a personality',
+            'Downloadable content for purchase',
+          ],
+          link: 'Still under development and will not be hosted on-line for the time being',
+          github: 'https://github.com/philyoosays/helios-react',
+          thumb: noImage,
+          note: 'Currently closed the third iteration, and have begun planning the 4th iteration.',
+          zoom: false,
+        },
+        {
           name: 'B2Devs',
           desc: 'I want to find small businesses and non-profits that can\'t afford a developer, and I want to amass a list of newbie devs that need experience and something to put on a resume and connect them together. The devs get real experience, the businesses get work they couldn\'t afford done.',
           tech: 'This is a React app that will eventually have a React Native build for mobile, database solution has not been selected yet but I\'m leaning towards MongoDB just for the practice. Back-end will be in Node.js/Express.js. HOWEVER, since I only have two views done, I\'m giving serious thought to just switching to Angular, just for the practice.',

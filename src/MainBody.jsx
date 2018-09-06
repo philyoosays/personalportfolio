@@ -14,6 +14,8 @@ import tetris from './screencaps/tetris.png';
 import emailwidget from './screencaps/email_widget.png';
 import minesweeper from './screencaps/minesweeper.png';
 import apologetics from './screencaps/apologetics_hub.png';
+import restaurantPOS from './screencaps/restaurantPOS.png';
+import helios from './screencaps/helios.png';
 
 export default class MainBody extends React.Component {
   constructor(props) {
@@ -147,7 +149,7 @@ export default class MainBody extends React.Component {
           ],
           link: 'Still in development and will not be hosted on-line',
           github: '',
-          thumb: noImage,
+          thumb: restaurantPOS,
           note: 'This is being built with selling it in mind so the Github repo is private.',
           zoom: false
         },
@@ -165,7 +167,7 @@ export default class MainBody extends React.Component {
           ],
           link: 'Still under development and will not be hosted on-line for the time being',
           github: 'https://github.com/philyoosays/helios-react',
-          thumb: noImage,
+          thumb: helios,
           note: 'Currently closed the third iteration, and have begun planning the 4th iteration.',
           zoom: false,
         },

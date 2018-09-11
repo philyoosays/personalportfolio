@@ -26,7 +26,7 @@ export default class MainBody extends React.Component {
         {
           name: 'Apologetics Hub',
           desc: 'Geared toward non-profits who\'s supporter-base need to defend themselves using accurate assertions or need to disprove an in-correct opposing view, this site is a template for such non-profits to supply their supporters with an easy to search hub for the true-ness or false-ness of a claim.',
-          tech: 'Wirtten with React with a Node/Express backend with PostgreSQL for data storage. JSON Web Tokens for auth into an admin section with is basically a content management control panel.',
+          tech: 'Written with React with a Node/Express backend with PostgreSQL for data storage. JSON Web Tokens for auth into an admin section with is basically a content management control panel.',
           highlights: [
             'JSON Web Tokens',
             'React.js',
@@ -40,6 +40,7 @@ export default class MainBody extends React.Component {
           thumb: apologetics,
           note: '***This is something I may want to sell so I might make the git repo private.',
           zoom: true,
+          heroku: true,
         },
         {
           name: 'GA Stack',
@@ -62,6 +63,7 @@ export default class MainBody extends React.Component {
           thumb: gastack,
           note: '',
           zoom: true,
+          heroku: false,
         },
         {
           name: 'WebSockets Game',
@@ -78,6 +80,7 @@ export default class MainBody extends React.Component {
           thumb: noImage,
           note: '***Currently not deployed but all functionality is working.',
           zoom: false,
+          heroku: false,
         },
         {
           name: 'Contact Resource Management (CRM) System',
@@ -96,6 +99,7 @@ export default class MainBody extends React.Component {
           thumb: crm,
           note: '',
           zoom: true,
+          heroku: true,
         },
         {
           name: 'Tetris',
@@ -113,6 +117,7 @@ export default class MainBody extends React.Component {
           thumb: tetris,
           note: '',
           zoom: false,
+          heroku: false,
         },
         {
           name: 'Old-school Snake',
@@ -129,6 +134,7 @@ export default class MainBody extends React.Component {
           thumb: snake,
           note: '',
           zoom: false,
+          heroku: false,
         }
       ],
       inprogress: [
@@ -151,11 +157,12 @@ export default class MainBody extends React.Component {
           github: '',
           thumb: restaurantPOS,
           note: 'This is being built with selling it in mind so the Github repo is private.',
-          zoom: false
+          zoom: true,
+          heroku: false,
         },
         {
           name: 'Helios',
-          desc: 'A voice and text prompted simulated AI that can do nearly everything Amazon\'s Alexa can do, but it has an additonal section that tries to determine user intent, context, and purpose of the heard speech. This allows it to respond back with memories and experiences and can tell you stories. You can interrupt him, ask a question about a detail of a story, get your answer and then Helios will pick up where it left off.',
+          desc: 'A voice and text prompted simulated AI that can do nearly everything Amazon\'s Alexa can do, but it has an additional section that tries to determine user intent, context, and purpose of the heard speech. This allows it to respond back with memories and experiences and can tell you stories. You can interrupt him, ask a question about a detail of a story, get your answer and then Helios will pick up where it left off.',
           tech: 'Speech Recognition and Speech sythesis are the major parts. It keeps records of the things it says or are spoken to, and adds them into its bank of memories. In the end, the Helios System will comprise of multiple computers all working with each other, each with a specific purpose to provide a robust home management system.',
           highlights: [
             'Speech Recognition',
@@ -170,6 +177,7 @@ export default class MainBody extends React.Component {
           thumb: helios,
           note: 'Currently closed the third iteration, and have begun planning the 4th iteration.',
           zoom: false,
+          heroku: false,
         },
         {
           name: 'B2Devs',
@@ -182,11 +190,12 @@ export default class MainBody extends React.Component {
             'possibly MongoDB',
             'React Native post-MVP',
           ],
-          link: 'Just started development.(updated 7/30)',
+          link: 'Stopped development to work on the POS',
           github: 'https://github.com/philyoosays/b2devs',
           thumb: noImage,
           note: '***Really considering a switch to Angular or VUE',
           zoom: false,
+          heroku: false,
         },
         {
           name: 'Psych Meds MobileApp',
@@ -203,6 +212,7 @@ export default class MainBody extends React.Component {
           thumb: noImage,
           note: 'This app was very recently conceived so nothing is really built yet',
           zoom: false,
+          heroku: false,
         },
         {
           name: 'Constituent Email Widget',
@@ -221,6 +231,7 @@ export default class MainBody extends React.Component {
           thumb: emailwidget,
           note: '***Currently working to solve the one-click email (from clients own email) send of template email. Modern email security-wise, this is impossible but I am working on the work-arounds needed to make this work.',
           zoom: true,
+          heroku: true,
         },
         {
           name: 'Minesweeper',
@@ -236,6 +247,7 @@ export default class MainBody extends React.Component {
           thumb: minesweeper,
           note: '***Most function is done, I just need to add scoring, flags, game reset, and other ancillary things to put a bow on top.',
           zoom: false,
+          heroku: false,
         }
       ],
       mouseX: 0,

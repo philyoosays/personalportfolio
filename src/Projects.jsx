@@ -9,6 +9,7 @@ export default function Projects(props) {
         <div className="header">
           <a href={item.link} target="_blank" rel="noopener noreferrer"><h1 className="projectheader">{item.name}</h1></a>
           <a href={item.link} target="_blank" rel="noopener noreferrer"><p className="projectlink">{item.link}</p></a>
+          { item.heroku ? 'As this project is hosted on a free server, it\'ll take 10 to 15 seconds to load the first time. Inactivity causes the server to spin down.' : '' }
         </div>
         <div className="flexcontainer">
           <div className="projectcontainer">

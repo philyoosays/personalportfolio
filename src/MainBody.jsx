@@ -26,7 +26,7 @@ export default class MainBody extends React.Component {
         {
           name: 'Point of Sales System - Retail',
           desc: 'A retail POS with modern bells and whistles. The system keeps track of payroll, inventory, and other expenses to be a one-stop shop for all the software needs of a retail business. Additional features are all modular and easy to add on.',
-          tech: 'This app has a React Front-end with a Node.js backend.,
+          tech: 'This app has a React Front-end with a Node.js backend.',
           highlights: [
             'JSON web tokens',
             'PostgreSQL',

@@ -24,6 +24,25 @@ export default class MainBody extends React.Component {
       navselection: 'projects',
       projects:[
         {
+          name: 'Point of Sales System - Retail',
+          desc: 'A retail POS with modern bells and whistles. The system keeps track of payroll, inventory, and other expenses to be a one-stop shop for all the software needs of a retail business. Additional features are all modular and easy to add on.',
+          tech: 'This app has a React Front-end with a Node.js backend.,
+          highlights: [
+            'JSON web tokens',
+            'PostgreSQL',
+            'React and React-Router',
+            'QR code based inventory management',
+            'real-time reporting for P/L',
+            'Peripheral support'
+          ],
+          link: 'Will not be hosted on-line',
+          github: '',
+          thumb: restaurantPOS,
+          note: 'This is built as a sellable product so the Github repo is private.',
+          zoom: true,
+          heroku: false,
+        },
+        {
           name: 'Apologetics Hub',
           desc: 'Geared toward non-profits who\'s supporter-base need to defend themselves using accurate assertions or need to disprove an in-correct opposing view, this site is a template for such non-profits to supply their supporters with an easy to search hub for the true-ness or false-ness of a claim.',
           tech: 'Written with React with a Node/Express backend with PostgreSQL for data storage. JSON Web Tokens for auth into an admin section with is basically a content management control panel.',
@@ -139,7 +158,7 @@ export default class MainBody extends React.Component {
       ],
       inprogress: [
         {
-          name: 'Point of Sales System',
+          name: 'Point of Sales System - Restaurant',
           desc: 'A restaurant POS with modern bells and whistles. The system will provide multiple options for managing the flow in the restaurant. Additional features are all modular and easy to add on.',
           tech: 'This app has multiple front-end UIs all written in React. There will a customer facing view for self ordering, a wait staff/hostess/kitechen facing view for order processing, an owner facing view to display real-time restaurant data, a web-based ordering system, and a React-Native mobile app for mobile ordering. Websockets are utilized to keep all the open instances synced in real-time as well as internet-sourced orders.',
           highlights: [

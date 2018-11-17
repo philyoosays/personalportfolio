@@ -16,6 +16,7 @@ import minesweeper from './screencaps/minesweeper.png';
 import apologetics from './screencaps/apologetics_hub.png';
 import restaurantPOS from './screencaps/restaurantPOS.png';
 import helios from './screencaps/helios.png';
+import retailPOS from './screencaps/retailPOS.png';
 
 export default class MainBody extends React.Component {
   constructor(props) {
@@ -37,7 +38,7 @@ export default class MainBody extends React.Component {
           ],
           link: 'Will not be hosted on-line',
           github: '',
-          thumb: restaurantPOS,
+          thumb: retailPOS,
           note: 'This is built as a sellable product so the Github repo is private.',
           zoom: true,
           heroku: false,

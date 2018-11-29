@@ -13,7 +13,7 @@ class App extends React.Component {
     this.updateWindowDim = this.updateWindowDim.bind(this)
   }
 
-  componentWillMount() {
+  componentDidMount() {
     fetch(`https://api.instagram.com/v1/users/self/media/recent/?access_token=${process.env.REACT_APP_INSTAGRAM}`)
       .then(response => response.json())
         .then(data => {
@@ -30,9 +30,6 @@ class App extends React.Component {
           })
         })
         this.updateWindowDim()
-  }
-
-  componentDidMount() {
     window.addEventListener('resize', this.updateWindowDim)
   }
 

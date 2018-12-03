@@ -19,6 +19,7 @@ import railsLogo from './icons/rails.png'
 import reactLogo from './icons/react.png'
 import reactNativeLogo from './icons/react_native.png'
 import rubyLogo from './icons/ruby.png'
+import sass from './icons/sass.png'
 
 export default function AboutMe() {
   return(

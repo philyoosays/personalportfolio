@@ -4,21 +4,21 @@ import Contact from './Contact'
 import Skills from './Skills'
 import './AboutMe.css';
 
+import aeLogo from './icons/adobe_after_effects.png'
+import aiLogo from './icons/adobe_illustrator.png'
+import expressLogo from './icons/expressjs.png'
 import headShot from './screencaps/phil_headshot.jpg'
 import jsLogo from './icons/javascript.svg'
 import jQueryLogo from './icons/jquery.png'
+import mongoDB from './icons/mongodb.png'
 import nodeLogo from './icons/node.png'
-import expressLogo from './icons/expressjs.png'
+import psLogo from './icons/adobe_photoshop.png'
 import psqlLogo from './icons/PostsgreSQL.png'
+import prLogo from './icons/adobe_premiere.png'
 import railsLogo from './icons/rails.png'
-import rubyLogo from './icons/ruby.png'
 import reactLogo from './icons/react.png'
 import reactNativeLogo from './icons/react_native.png'
-import psLogo from './icons/adobe_photoshop.png'
-import aiLogo from './icons/adobe_illustrator.png'
-import aeLogo from './icons/adobe_after_effects.png'
-import prLogo from './icons/adobe_premiere.png'
-import mongoDB from './icons/mongodb.png'
+import rubyLogo from './icons/ruby.png'
 
 export default function AboutMe() {
   return(
@@ -59,11 +59,11 @@ export default function AboutMe() {
           <Skills
             labelone="PostgreSQL"
             labeltwo="MongoDB"
-            labelthree=""
+            labelthree="Sass"
             labelfour=""
             iconone={psqlLogo}
             icontwo={mongoDB}
-            iconthree=""
+            iconthree={ sass }
             iconfour=""
           />
           <Skills

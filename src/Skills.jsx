@@ -5,7 +5,7 @@ import './Skills.css'
 
 export default function Skills(props) {
   return(
-      <div className="flexboxcontainer">
+      <div className="flexboxcontainer skillrow">
         <div className="flexitem">
           <img src={props.iconone} className="fleximage" alt="" />
           <p>{props.labelone}</p>

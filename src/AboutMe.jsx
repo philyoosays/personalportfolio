@@ -52,24 +52,24 @@ export default function AboutMe() {
             iconfour={ reactNativeLogo }
           />
           <Skills
-            labelone="Ruby"
-            labeltwo="Rails"
+            labelone="Python"
+            labeltwo="Django"
             labelthree="Node.js"
             labelfour="Express.js"
-            iconone={ rubyLogo }
-            icontwo={ railsLogo }
+            iconone={ python }
+            icontwo={ django }
             iconthree={ nodeLogo }
             iconfour={ expressLogo }
           />
           <Skills
-            labelone="PostgreSQL"
-            labeltwo="MongoDB"
-            labelthree="Python"
-            labelfour="Django"
-            iconone={ psqlLogo }
-            icontwo={ mongoDB }
-            iconthree={ python }
-            iconfour={ django }
+            labelone="Ruby"
+            labeltwo="Rails"
+            labelthree="PostgreSQL"
+            labelfour="MongoDB"
+            iconone={ ruby }
+            icontwo={ rails }
+            iconthree={ psqlLogo }
+            iconfour={ mongoDB }
           />
           <Skills
             labelone="HTML"

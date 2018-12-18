@@ -7,7 +7,7 @@ import './AboutMe.css';
 import aeLogo from './icons/adobe_after_effects.png'
 import aiLogo from './icons/adobe_illustrator.png'
 import css from './icons/css.png'
-import django from './icon/django.png'
+import django from './icons/django.png'
 import expressLogo from './icons/expressjs.png'
 import headShot from './screencaps/phil_headshot.jpg'
 import html from './icon/html.png'

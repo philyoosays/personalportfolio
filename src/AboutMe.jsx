@@ -10,7 +10,7 @@ import css from './icons/css.png'
 import django from './icons/django.png'
 import expressLogo from './icons/expressjs.png'
 import headShot from './screencaps/phil_headshot.jpg'
-import html from './icon/html.png'
+import html from './icons/html.png'
 import jsLogo from './icons/javascript.svg'
 import jQueryLogo from './icons/jquery.png'
 import mongoDB from './icons/mongodb.png'
@@ -64,16 +64,16 @@ export default function AboutMe() {
           <Skills
             labelone="PostgreSQL"
             labeltwo="MongoDB"
-            labelthree="Sass"
-            labelfour=""
+            labelthree="Python"
+            labelfour="Django"
             iconone={ psqlLogo }
             icontwo={ mongoDB }
             iconthree={ python }
             iconfour={ django }
           />
           <Skills
-            labelone="PostgreSQL"
-            labeltwo="MongoDB"
+            labelone="HTML"
+            labeltwo="CSS"
             labelthree="Sass"
             labelfour=""
             iconone={ html }

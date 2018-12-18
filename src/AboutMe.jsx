@@ -6,8 +6,11 @@ import './AboutMe.css';
 
 import aeLogo from './icons/adobe_after_effects.png'
 import aiLogo from './icons/adobe_illustrator.png'
+import css from './icons/css/png'
+import django from './icon/django.png'
 import expressLogo from './icons/expressjs.png'
 import headShot from './screencaps/phil_headshot.jpg'
+import html from './icon/html.png'
 import jsLogo from './icons/javascript.svg'
 import jQueryLogo from './icons/jquery.png'
 import mongoDB from './icons/mongodb.png'
@@ -15,6 +18,7 @@ import nodeLogo from './icons/node.png'
 import psLogo from './icons/adobe_photoshop.png'
 import psqlLogo from './icons/PostsgreSQL.png'
 import prLogo from './icons/adobe_premiere.png'
+import python from './icons/python.png'
 import railsLogo from './icons/rails.png'
 import reactLogo from './icons/react.png'
 import reactNativeLogo from './icons/react_native.png'
@@ -42,28 +46,38 @@ export default function AboutMe() {
             labeltwo="JQuery"
             labelthree="React.js"
             labelfour="React Native"
-            iconone={jsLogo}
-            icontwo={jQueryLogo}
-            iconthree={reactLogo}
-            iconfour={reactNativeLogo}
+            iconone={ jsLogo }
+            icontwo={ jQueryLogo }
+            iconthree={ reactLogo }
+            iconfour={ reactNativeLogo }
           />
           <Skills
             labelone="Ruby"
             labeltwo="Rails"
             labelthree="Node.js"
             labelfour="Express.js"
-            iconone={rubyLogo}
-            icontwo={railsLogo}
-            iconthree={nodeLogo}
-            iconfour={expressLogo}
+            iconone={ rubyLogo }
+            icontwo={ railsLogo }
+            iconthree={ nodeLogo }
+            iconfour={ expressLogo }
           />
           <Skills
             labelone="PostgreSQL"
             labeltwo="MongoDB"
             labelthree="Sass"
             labelfour=""
-            iconone={psqlLogo}
-            icontwo={mongoDB}
+            iconone={ psqlLogo }
+            icontwo={ mongoDB }
+            iconthree={ python }
+            iconfour={ django }
+          />
+          <Skills
+            labelone="PostgreSQL"
+            labeltwo="MongoDB"
+            labelthree="Sass"
+            labelfour=""
+            iconone={ html }
+            icontwo={ css }
             iconthree={ sass }
             iconfour=""
           />

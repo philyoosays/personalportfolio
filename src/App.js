@@ -44,7 +44,7 @@ class App extends React.Component {
     const divHeight = (this.state.windowWidth * .166)
     const backSplash = this.state.images.length === 0 ?
       <div>
-        <div className="noimg" ><p>Instagram fetch isn't working</p></div>
+        <div className="noimg" />
         <div className="noimg" />
         <div className="noimg" />
       </div>

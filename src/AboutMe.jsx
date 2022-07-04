@@ -7,23 +7,22 @@ import './AboutMe.css';
 import aeLogo from './icons/adobe_after_effects.png'
 import aiLogo from './icons/adobe_illustrator.png'
 import css from './icons/css.png'
-import django from './icons/Django.png'
+// import django from './icons/Django.png'
 import expressLogo from './icons/expressjs.png'
+import goLogo from './icons/goIcon.png'
 import headShot from './screencaps/phil_headshot.jpg'
 import html from './icons/html.png'
 import jsLogo from './icons/javascript.svg'
-import jQueryLogo from './icons/jquery.png'
 import mongoDB from './icons/mongodb.png'
 import nodeLogo from './icons/node.png'
 import psLogo from './icons/adobe_photoshop.png'
 import psqlLogo from './icons/PostgreSQL.png'
 import prLogo from './icons/adobe_premiere.png'
 import python from './icons/python.png'
-import railsLogo from './icons/rails.png'
 import reactLogo from './icons/react.png'
 import reactNativeLogo from './icons/react_native.png'
-import rubyLogo from './icons/ruby.png'
 import sass from './icons/sass.png'
+import tsLogo from './icons/tsLogo.png'
 
 export default function AboutMe() {
   return(
@@ -43,33 +42,33 @@ export default function AboutMe() {
         <h3>SKILLS</h3>
           <Skills
             labelone="JavaScript"
-            labeltwo="JQuery"
+            labeltwo="Typescript"
             labelthree="React.js"
-            labelfour="React Native"
+            labelfour="Node.js"
             iconone={ jsLogo }
-            icontwo={ jQueryLogo }
+            icontwo={ tsLogo }
             iconthree={ reactLogo }
-            iconfour={ reactNativeLogo }
+            iconfour={ nodeLogo }
           />
           <Skills
             labelone="Python"
-            labeltwo="Django"
-            labelthree="Node.js"
+            labeltwo="React Native"
+            labelthree="Go Lang"
             labelfour="Express.js"
             iconone={ python }
-            icontwo={ django }
-            iconthree={ nodeLogo }
+            icontwo={ reactNativeLogo }
+            iconthree={ goLogo }
             iconfour={ expressLogo }
           />
           <Skills
-            labelone="Ruby"
-            labeltwo="Rails"
-            labelthree="PostgreSQL"
-            labelfour="MongoDB"
-            iconone={ ruby }
-            icontwo={ rails }
-            iconthree={ psqlLogo }
-            iconfour={ mongoDB }
+            labelone="PostgreSQL"
+            labeltwo="MongoDB"
+            labelthree=""
+            labelfour=""
+            iconone={ psqlLogo }
+            icontwo={ mongoDB }
+            iconthree=""
+            iconfour=""
           />
           <Skills
             labelone="HTML"

@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 import MainBody from './MainBody'
 import './App.css';
 
@@ -13,24 +14,25 @@ class App extends React.Component {
     this.updateWindowDim = this.updateWindowDim.bind(this)
   }
 
-  componentDidMount() {
-    fetch(`https://api.instagram.com/v1/users/self/media/recent/?access_token=${process.env.REACT_APP_INSTAGRAM}`)
-      .then(response => response.json())
-        .then(data => {
-          let theImages = []
-          data.data.forEach((data, index) => {
-            let apiImages = data.images.low_resolution;
-            if(data.hasOwnProperty('images') && theImages.length < 24) {
-              theImages.push({url: apiImages.url, height: apiImages.height, width: apiImages.width})
-            }
-          })
-          this.setState({
-            images: theImages,
-            windowWidth: window.innerWidth
-          })
-        })
-        this.updateWindowDim()
+  async componentDidMount() {
+    await this.fetchAndSetInstagram()
+    this.updateWindowDim()
     window.addEventListener('resize', this.updateWindowDim)
+  }
+
+  async fetchAndSetInstagram() {
+    const res = await axios.get(`https://graph.instagram.com/v14.0/${process.env.REACT_APP_INSTA_USER_ID}/media`, {
+      params: {
+        access_token: process.env.REACT_APP_INSTA_ACCESS_TOKEN,
+        fields: 'permalink,media_type,media_url'
+      }
+    })
+    const data = res.data.data;
+    console.log(data)
+    this.setState({
+      images: data,
+      windowWidth: window.innerWidth
+    })
   }
 
   updateWindowDim() {
@@ -50,18 +52,11 @@ class App extends React.Component {
       </div>
       : this.state.images.map((data, index) => {
         if(index < 18) {
-          if(data.width === data.height) {
-            return(
-              <div className="imgcontainer" >
-                <img className="image" src={data.url} alt="" />
-              </div>
-            )
-          } else {
-            let backImage = {backgroundImage: 'url(' + data.url + ')', height: divHeight + 'px'}
-            return(
-                <div className="img" style={backImage} />
-            )
-          }
+          return (
+            <div className="imgcontainer" >
+              <img className="image" src={data.media_url} alt="" />
+            </div>
+          )
         }
         return '';
       })

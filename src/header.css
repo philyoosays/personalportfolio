@@ -48,8 +48,8 @@
     margin: 0;
     margin-right: 5px;
     text-align: right;
-    font-size: 10vh;
-    font-weight: 800;
+    font-size: 11vh;
+    font-weight: 900;
     color: white;
     transform: rotate(-5deg) skewX(-5deg);
 
@@ -59,7 +59,7 @@
 .text {
     margin: 0 1.5vw;
     text-align: right;
-    font-size: 4.2vh;
+    font-size: 4.55vh;
     font-weight: 800;
     color: black;
     /* position: relative; */

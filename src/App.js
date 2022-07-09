@@ -17,6 +17,7 @@ class App extends React.Component {
     let data;
     if (process.env.NODE_ENV !== 'development') {
       data = JSON.parse(localStorage.getItem('insta-imgs'));
+      console.log('local', data)
     } else {
       const res = await axios.get(`https://graph.instagram.com/v14.0/${process.env.REACT_APP_INSTA_USER_ID}/media`, {
         params: {
@@ -25,6 +26,7 @@ class App extends React.Component {
         }
       })
       data = res.data.data;
+      console.log('data', data)
       // localStorage.setItem('insta-imgs', JSON.stringify(data));
     }
     if (data) this.setState({ images: data });

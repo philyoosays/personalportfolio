@@ -28,7 +28,7 @@ class App extends React.Component {
     const { images } = this.state;
     return(
       <div>
-        <Header images={images} />
+        <Header images={[]} />
         {/* <div className="bodystart">
           <MainBody
             width={this.state.windowWidth}

@@ -3,11 +3,23 @@ import React from 'react';
 import './styles/header.css';
 
 const Header = ({ images }) => {
-    const makeImages = () => images.map(data => (
-        <div className="imgcontainer" >
-          <img className="image" src={data.media_url} alt="" />
-        </div>
-    )).slice(0, 18)
+    const makeImages = () => {
+        if (images.length) {
+            return images.slice(0,18).map(data => (
+                <div className="imgcontainer" >
+                  <img className="image" src={data.media_url} alt="" />
+                </div>
+            ))
+        } else {
+            return (
+                <div>
+                    <div className="noimg" />
+                    <div className="noimg" />
+                    <div className="noimg" />
+                </div>
+            );
+        }
+    }
 
     return (
         <div className="header">

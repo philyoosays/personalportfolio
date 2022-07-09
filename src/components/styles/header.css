@@ -92,3 +92,16 @@
     overflow: hidden;
 }
   
+
+.noimg {
+    display: block;
+    height: calc(100vw / 6);
+    width: 100%;
+    background: black;
+    color: white;
+}
+
+.noimg > p {
+    position: relative;
+    top: 20%;
+}

@@ -1,24 +1,16 @@
 import React from 'react';
 import axios from 'axios';
-import Header from './Header';
+import Header from './components/Header';
 // import MainBody from './MainBody'
 import './App.css';
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      images: [],
-      windowWidth: 0,
-      windowHeight: 0
-    }
-    this.updateWindowDim = this.updateWindowDim.bind(this)
+  state = {
+    images: []
   }
 
   async componentDidMount() {
     await this.fetchAndSetInstagram()
-    this.updateWindowDim()
-    window.addEventListener('resize', this.updateWindowDim)
   }
 
   async fetchAndSetInstagram() {
@@ -29,18 +21,7 @@ class App extends React.Component {
       }
     })
     const data = res.data.data;
-    console.log(data)
-    this.setState({
-      images: data,
-      windowWidth: window.innerWidth
-    })
-  }
-
-  updateWindowDim() {
-    this.setState({
-      windowWidth: window.innerWidth,
-      windowHeight: window.innerHeight
-    })
+    this.setState({ images: data })
   }
 
   render() {

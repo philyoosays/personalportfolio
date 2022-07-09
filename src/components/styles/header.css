@@ -62,9 +62,14 @@
     font-size: 4.55vw;
     font-weight: 800;
     color: black;
+    /* line-height: 4.55vw; */
     /* position: relative; */
     /* top: -15vh; */
-    z-index: 1000000;
+    /* z-index: 1000000; */
+}
+
+.text:nth-child(2n) {
+    line-height: 3vw;
 }
 
 .image {

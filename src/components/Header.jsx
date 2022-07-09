@@ -5,24 +5,22 @@ import './styles/header.css';
 const Header = ({ images }) => {
     const makeImages = () => {
         if (images.length) {
-            return images.slice(0,18).map(data => (
-                <div className="imgcontainer" >
+            return images.slice(0,18).map((data, idx) => (
+                <div className="imgcontainer" key={idx}>
                   <img className="image" src={data.media_url} alt="" />
                 </div>
             ))
         } else {
-            return (
-                <div>
-                    <div className="noimg" />
-                    <div className="noimg" />
-                    <div className="noimg" />
-                </div>
-            );
+            return [
+                <div className="noimg" key="1" />,
+                <div className="noimg" key="2" />,
+                <div className="noimg" key="3" />,
+            ]
         }
     }
 
     return (
-        <div className="header">
+        <section className="header">
             <div className="topbar" />
             <div className="insta">
                 {/* {backSplash} */}
@@ -35,7 +33,7 @@ const Header = ({ images }) => {
                     <p className="text">NYC</p>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 

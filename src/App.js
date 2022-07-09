@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import Header from './Header';
-import MainBody from './MainBody'
+// import MainBody from './MainBody'
 import './App.css';
 
 class App extends React.Component {

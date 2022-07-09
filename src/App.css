@@ -115,9 +115,9 @@
   height: 600px;
   width: 100%;
   background: white;
-  position: absolute;
-  /*top: 110%;*/
-  z-index: 10;
+  position: relative;
+  top: 10vh;
+  z-index: 5;
 }
 
 @media(max-width: 1260px) {

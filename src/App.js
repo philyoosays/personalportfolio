@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import Header from './Header';
 import MainBody from './MainBody'
 import './App.css';
 
@@ -43,53 +44,16 @@ class App extends React.Component {
   }
 
   render() {
-    const divHeight = (this.state.windowWidth * .166)
-    const backSplash = this.state.images.length === 0 ?
-      <div>
-        <div className="noimg" />
-        <div className="noimg" />
-        <div className="noimg" />
-      </div>
-      : this.state.images.map((data, index) => {
-        if(index < 18) {
-          return (
-            <div className="imgcontainer" >
-              <img className="image" src={data.media_url} alt="" />
-            </div>
-          )
-        }
-        return '';
-      })
-
-    const bottomPos = {top: divHeight * 2.7}
-    const bodStart = {top: this.state.windowWidth > 600 ?
-                          (this.state.windowWidth / 10 + '%') :
-                          (this.state.windowWidth / 8 + '%')}
-    // const bodStart = {top: this.state.windowWidth >= 1000 ?
-    //                       this.state.windowHeight :
-    //                       this.state.windowHeight * .8}
-    const topPos = {top: this.state.windowWidth > 700 ? '-35%' :
-      window.innerWidth < 700 && window.innerWidth > 400 ? '-38%' : '-44%'}
+    const { images } = this.state;
     return(
       <div>
-        <div className="topborder" style={topPos}></div>
-        <div className="imageRow">
-          {backSplash}
-        </div>
-        <div className="bodystart" style={bodStart}>
+        <Header images={images} />
+        {/* <div className="bodystart">
           <MainBody
             width={this.state.windowWidth}
             height={this.state.windowHeight}
           />
-        </div>
-        <div className="bottomborder" style={bottomPos}>
-          <h1 className="myname">PHIL YOO</h1>
-          <div className="descriptcontainer">
-            <h2 className="mydescript">SOFTWARE ENGINEER</h2>
-            <h2 className="mydescript">VIDEO PRODUCER</h2>
-            <h2 className="mydescript">NYC</h2>
-          </div>
-        </div>
+        </div> */}
       </div>
     );
   }

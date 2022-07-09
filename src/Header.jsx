@@ -1,35 +1,43 @@
 import React, { useEffect, useState } from 'react';
-import { useArray } from 'yoo-lib/dist/hooks';
-import axios from 'axios';
 
-const Header = props => {
-    const [images, setImages, imgUtils] = useArray([]);
+import './header.css';
+
+const Header = ({ images }) => {
     const [isLoaded, setIsLoaded] = useState(false);
-
-    const getImages = async () => {
-        const res = await axios.get(`https://graph.instagram.com/v14.0/${process.env.REACT_APP_INSTA_USER_ID}/media`, {
-            params: {
-                access_token: process.env.REACT_APP_INSTA_ACCESS_TOKEN,
-                fields: 'permalink',
-            },
-        });
-        const data = res.data.data;
-        imgUtils.addMany(data);
-    }
 
     const makeImages = () => images.map(data => (
         <div className="imgcontainer" >
-          <img className="image" src={data.permalink} alt="" />
+          <img className="image" src={data.media_url} alt="" />
         </div>
-    ))
+    )).slice(0, 18)
 
-    useEffect(async () => {
-        imgUtils.clear();
-        if (!isLoaded) {
-            getImages();
-            setIsLoaded();
+    const backSplash = (images || []).map((data, index) => {
+        if(index < 18) {
+            return (
+                <div className="imgcontainer" >
+                    <img className="image" src={data.media_url} alt="" />
+                </div>
+            )
         }
+        return '';
     })
 
-    return 
+    return (
+        <div className="header">
+            <div className="topbar" />
+            <div className="insta">
+                {/* {backSplash} */}
+                {makeImages()}
+            </div>
+            <div className="lower-section">
+                <p className="bartext">PHIL YOO</p>
+                <div className="bottombar">
+                    <p className="text">SOFTWARE ENGINEER</p>
+                    <p className="text">NYC</p>
+                </div>
+            </div>
+        </div>
+    )
 }
+
+export default Header;

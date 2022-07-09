@@ -5,7 +5,7 @@
   "dependencies": {
     "axios": "^0.27.2",
     "font-awesome": "^4.7.0",
-    "googleapis": "^27.0.0",
+    "googleapis": "^39.1.0",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
     "react-router-dom": "^4.2.2",

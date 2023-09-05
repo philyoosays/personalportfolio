@@ -5,7 +5,9 @@ if (process.env.NODE_ENV === 'production') {
     serverURL = 'https://philyoo.herokuapp.com'
 }
 
-export default {
+const CONFIG = {
     asset_id: '50cd5b7apq',
     serverURL,
 }
+
+export default CONFIG

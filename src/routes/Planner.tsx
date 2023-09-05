@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { Outlet } from 'react-router-dom';
 import { Auth0Provider, useAuth0 } from '@auth0/auth0-react';
 import { useDispatch, useSelector, } from 'react-redux';
@@ -69,7 +69,7 @@ function Planner() {
             .then(res => PlannerStore.setUser(res)(dispatch))
             .catch(console.error)
         }
-    }, [authUser]);
+    }, [authUser, user, dispatch]);
 
     return (
         <div className="planner">
@@ -81,7 +81,7 @@ function Planner() {
     );
 };
 
-export default () => (
+const PlannerComponent = () => (
     <Auth0Provider
         domain={REACT_APP_AUTH0_DOMAIN || ''}
         clientId={REACT_APP_AUTH0_CLIENT_ID || ''}
@@ -90,3 +90,5 @@ export default () => (
         <Planner />
     </Auth0Provider>
 );
+
+export default PlannerComponent

@@ -7,13 +7,13 @@ import aeLogo from '../icons/adobe_after_effects.png'
 import aiLogo from '../icons/adobe_illustrator.png'
 import bashLogo from '../icons/bash-logo.png'
 import circleciLogo from '../icons/circleci-logo.png';
-import css from '../icons/css.png'
+// import css from '../icons/css.png'
 // import django from '../icons/Django.png'
 import dockerLogo from '../icons/docker-logo.png';
 // import expressLogo from '../icons/expressjs.png'
 import gitlabciLogo from '../icons/gitlab-ci.png';
 import goLogo from '../icons/goIcon.png'
-import html from '../icons/html.png'
+// import html from '../icons/html.png'
 import mongoDB from '../icons/mongodb.png'
 import nodeLogo from '../icons/node.png';
 import npmLogo from '../icons/npm-logo.png';
@@ -81,6 +81,7 @@ const AboutMe = (props: Type.Props) => {
                             className="skill-logo"
                             key={idx}
                             style={renderStyles}
+                            alt={name}
                         />
                     </div>
                     <div className="aboutme-skills-label">

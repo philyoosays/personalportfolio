@@ -1,0 +1,82 @@
+
+$linkedin_blue: #0b65c2;
+
+.aboutme {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    &-text {
+        max-width: 500px;
+        position: relative;
+        left: 5%;
+        margin: 0 auto;
+        padding: 0 10px;
+        & > p {
+            margin-left: 5px;
+            margin-right: 5px;
+            text-align: left;
+            // line-height: 5px;
+            font-weight: 300;
+        }
+    }
+    &-link {
+        margin: 20px auto;
+
+        &-linkedin {
+            text-decoration: none;
+            cursor: pointer;
+
+            & p {
+                line-height: 0;
+                color: black;
+                font-weight: 300;
+                margin: 12px 0;
+            }
+    
+            & div.yoolib-inputLabel-label {
+                margin: 0;
+                fill: $linkedin_blue;
+            }
+        }
+    }
+
+    &-skills {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 60%;
+        margin: 30px auto;
+
+        &-skill {
+            display: flex;
+            flex-direction: column;
+            margin: 5px;
+        }
+
+        &-imgCont {
+            height: 75%;
+        }
+
+        &-label {
+            &-text {
+                font-size: 0.7em;
+                margin: 0.3em 0;
+            }
+        }
+
+        & .skill-logo {
+            width: 4em;
+            max-width: 10vw;
+            object-fit: contain;
+            margin: 0 5px;
+        }
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .aboutme-text {
+        // left: 0px;
+    }
+}

@@ -1,5 +1,6 @@
 import {useEffect, useState} from 'react';
 import axios from 'axios';
+import nycSkyline from '../assets/nyc-skyline.jpg'
 // import { useLocation } from 'react-router-dom';
 // import analytics from '../utils/analytics';
 
@@ -46,31 +47,38 @@ const Header = (props: Type.Props) => {
             console.error(err);
             // analytics.event(location, { details: 'Instagram fetch fail', flags: ['error'], payload: err });
         }
-        return data;
+        return undefined;
     }
 
     const makeImages = () => {
-        return images.slice(0,18).map((data, idx) => (
-            <div className="imgcontainer" key={idx}>
-                {
-                    data.media_url
-                    ? <img className="image" src={data.media_url} alt="" />
-                    : <div className="noimg" />
-                }
-              {/* <img className={data.media_url ? "image" : 'noimg'} src={data.media_url || '_blank'} alt="" /> */}
-            </div>
-        ))
+        if (images && images.length) {
+            return images.slice(0,18).map((data, idx) => (
+                <div className="imgcontainer" key={idx}>
+                    {
+                        data.media_url
+                        ? <img className="image" src={data.media_url} alt="" />
+                        : <div className="noimg" />
+                    }
+                  {/* <img className={data.media_url ? "image" : 'noimg'} src={data.media_url || '_blank'} alt="" /> */}
+                </div>
+            ))
+        } else {
+            return (
+                <div className="image">
+                    <img
+                        className="image"
+                        src={nycSkyline}
+                        style={{ opacity: 1 }}
+                        alt="nyc-skyline"
+                    />
+                </div>
+            )
+        }
     }
 
     useEffect(() => {
         if (!images || !images.length) {
-            fetchAndSetInstagram().then(images => {
-                const empty = []
-                for (let i = 0; i < 18; i++) {
-                    empty.push({ media_url: '' })
-                }
-                setImages(images || empty)
-            })
+            fetchAndSetInstagram().then(setImages)
         }
     })
 

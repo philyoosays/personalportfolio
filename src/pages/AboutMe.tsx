@@ -104,7 +104,7 @@ const AboutMe = (props: Type.Props) => {
                 <p>
                     Primarily a Javascript/Typescript Developer.<br />
                     Full-stack with a minor preference to the back-end.<br />
-                    Working on a regular basis with Python, GO, PSQL, Bash Scripting.<br />
+                    Working on a regular basis with PSQL, Python, GO, Bash Scripting.<br />
                 </p>
                 <p>
                     Experience in publishing and maintaining npm packages, 

@@ -4,14 +4,17 @@ import React, {
 } from 'react';
 import { Route, Routes, useLocation, Navigate } from 'react-router-dom';
 import { Header, Nav } from './components';
-import { AboutMe, Contact } from './pages';
+import {
+  AboutMe,
+  // Contact,
+} from './pages';
 import Planner from './routes/Planner';
 // import analytics from './utils/analytics';
 import {
   ProtectedRoute,
   // TopMenu
 } from './components';
-import { Dates, Login } from './pages/planner'
+// import { Dates, Login } from './pages/planner'
 import './App.scss';
 
 export namespace Type {
@@ -57,12 +60,12 @@ const App = (props: Type.Props) => {
       <Main />
       <Routes>
         <Route path="/planner" element={<Planner />}>
-          <Route path="dates" element={<ProtectedRoute view={<Dates items={[]} />} />} />
-          <Route path="login" element={<Login />} />
+          {/* <Route path="dates" element={<ProtectedRoute view={<Dates items={[]} />} />} /> */}
+          {/* <Route path="login" element={<Login />} /> */}
           <Route path="places" element={<ProtectedRoute view={<div />} />} />
           <Route path="picks" element={<ProtectedRoute view={<div />} />} />
         </Route>
-        <Route path="/contact" element={<Contact />} />
+        {/* <Route path="/contact" element={<Contact />} /> */}
         <Route path="/about" element={<AboutMe />} />
         <Route path="/" element={<Navigate to="/about" />} />
         {/* <Route path="/" element={<div style={{ height: '500px', width: '100%' }} />} /> */}

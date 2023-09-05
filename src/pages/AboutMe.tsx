@@ -1,6 +1,6 @@
 import { CSSProperties } from 'react';
-import { InputLabel } from 'yoo-lib/dist/components';
-import { useLocation } from 'react-router-dom';
+// import { InputLabel } from 'yoo-lib/dist/components';
+// import { useLocation } from 'react-router-dom';
 // import analytics from '../utils/analytics';
 
 import aeLogo from '../icons/adobe_after_effects.png'
@@ -115,9 +115,11 @@ const AboutMe = (props: Type.Props) => {
             </div>
             <div className="aboutme-link">
                 <a className="aboutme-link-linkedin" href="https://www.linkedin.com/in/philyoo" onClick={handleLinkClick}>
-                    <InputLabel label={LINKEDIN_ICO}>
+                    {/* <InputLabel label={LINKEDIN_ICO}>
                         <p>linkedin.com/in/philyoo</p>
-                    </InputLabel>
+                    </InputLabel> */}
+                    {LINKEDIN_ICO}
+                    <p>linkedin.com/in/philyoo</p>
                 </a>
             </div>
             <div className="aboutme-skills">

@@ -29,15 +29,27 @@ $linkedin_blue: #0b65c2;
             cursor: pointer;
 
             & p {
-                line-height: 0;
+                // line-height: 0;
                 color: black;
                 font-weight: 300;
-                margin: 12px 0;
+                // margin: 12px 0;
             }
     
-            & div.yoolib-inputLabel-label {
+            & div.yoolib-inputLabel-label, & svg {
                 margin: 0;
                 fill: $linkedin_blue;
+            }
+
+            & svg {
+                display: inline-block;
+            }
+
+            & p {
+                display: inline-block;
+                margin: 0 10px;
+                // line-height: 12px;
+                position: relative;
+                bottom: 6px;
             }
         }
     }
@@ -76,7 +88,7 @@ $linkedin_blue: #0b65c2;
 }
 
 @media only screen and (max-width: 700px) {
-    .aboutme-text {
+    // .aboutme-text {
         // left: 0px;
-    }
+    // }
 }

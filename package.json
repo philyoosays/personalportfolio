@@ -27,7 +27,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "clean": "rm package-lock.json; rm -rf node_modules",
-    "refresh": "npm run clean; npm i"
+    "refresh": "npm run clean; npm i --legacy-peer-deps"
   },
   "eslintConfig": {
     "extends": [

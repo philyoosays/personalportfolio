@@ -1,10 +1,16 @@
-import React, { useEffect, useState } from 'react';
+import React, {
+  // useEffect,
+  // useState
+} from 'react';
 import { Route, Routes, useLocation, Navigate } from 'react-router-dom';
 import { Header, Nav } from './components';
 import { AboutMe, Contact } from './pages';
 import Planner from './routes/Planner';
 // import analytics from './utils/analytics';
-import { ProtectedRoute, TopMenu } from './components';
+import {
+  ProtectedRoute,
+  // TopMenu
+} from './components';
 import { Dates, Login } from './pages/planner'
 import './App.scss';
 

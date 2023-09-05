@@ -19,7 +19,7 @@ export namespace Type {
 
 const Header = (props: Type.Props) => {
     const [images, setImages] = useState<Type.InstaImg[]>([]);
-    const location = useLocation();
+    // const location = useLocation();
     const fetchAndSetInstagram = async () => {
         let data;
         try {
@@ -60,14 +60,6 @@ const Header = (props: Type.Props) => {
               {/* <img className={data.media_url ? "image" : 'noimg'} src={data.media_url || '_blank'} alt="" /> */}
             </div>
         ))
-        if (images && images.length) {
-        } else {
-            return [
-                <div className="noimg" key="1" />,
-                <div className="noimg" key="2" />,
-                <div className="noimg" key="3" />,
-            ]
-        }
     }
 
     useEffect(() => {

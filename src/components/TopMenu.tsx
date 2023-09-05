@@ -1,4 +1,7 @@
-import { useLocation, useNavigate } from 'react-router-dom'
+import {
+    // useLocation,
+    useNavigate
+} from 'react-router-dom'
 import { useAuth0 } from '@auth0/auth0-react';
 import './styles/topMenu.scss';
 
@@ -9,7 +12,7 @@ export namespace Type {
 }
 
 const TopMenu = ({ items }: Type.Props) => {
-    const location = useLocation();
+    // const location = useLocation();
     const navigate = useNavigate();
     const { logout } = useAuth0();
     const menuItems = items.map((item, idx) => {

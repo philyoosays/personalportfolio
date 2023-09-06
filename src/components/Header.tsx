@@ -80,7 +80,7 @@ const Header = (props: Type.Props) => {
         if (!images || !images.length) {
             fetchAndSetInstagram().then(setImages)
         }
-    })
+    }, [images])
 
     return (
         <section className="header">

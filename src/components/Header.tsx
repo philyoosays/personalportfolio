@@ -47,7 +47,7 @@ const Header = (props: Type.Props) => {
             console.error(err);
             // analytics.event(location, { details: 'Instagram fetch fail', flags: ['error'], payload: err });
         }
-        return undefined;
+        return data;
     }
 
     const makeImages = () => {

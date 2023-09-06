@@ -19,6 +19,7 @@ export namespace Type {
 }
 
 const Header = (props: Type.Props) => {
+    const [fetchComplete, markFetchFlag] = useState<boolean>(false)
     const [images, setImages] = useState<Type.InstaImg[]>([]);
     // const location = useLocation();
     const fetchAndSetInstagram = async () => {
@@ -47,6 +48,7 @@ const Header = (props: Type.Props) => {
             console.error(err);
             // analytics.event(location, { details: 'Instagram fetch fail', flags: ['error'], payload: err });
         }
+        markFetchFlag(true)
         return data;
     }
 
@@ -62,6 +64,16 @@ const Header = (props: Type.Props) => {
                   {/* <img className={data.media_url ? "image" : 'noimg'} src={data.media_url || '_blank'} alt="" /> */}
                 </div>
             ))
+        } else if (!fetchComplete) {
+            const blankImages = []
+            for (let i = 0; i < 18; i++) {
+                blankImages.push(
+                    <div className="imgcontainer" key={i}>
+                        <div className="noimg" />
+                    </div>
+                )
+            }
+            return <>{blankImages}</>
         } else {
             return (
                 <div className="image">

@@ -67,7 +67,8 @@ const App = (props: Type.Props) => {
         </Route>
         {/* <Route path="/contact" element={<Contact />} /> */}
         <Route path="/about" element={<AboutMe />} />
-        <Route path="/" element={<Navigate to="/about" />} />
+        {/* <Route path="/" element={<Navigate to="/about" />} /> */}
+        <Route path="/" element={<AboutMe />} />
         {/* <Route path="/" element={<div style={{ height: '500px', width: '100%' }} />} /> */}
       </Routes>
     </div>

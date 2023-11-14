@@ -2,7 +2,12 @@ import React, {
   // useEffect,
   // useState
 } from 'react';
-import { Route, Routes, useLocation, Navigate } from 'react-router-dom';
+import {
+  Route,
+  Routes,
+  useLocation,
+  // Navigate
+} from 'react-router-dom';
 import { Header, Nav } from './components';
 import {
   AboutMe,

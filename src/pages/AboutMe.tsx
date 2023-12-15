@@ -115,7 +115,12 @@ const AboutMe = (props: Type.Props) => {
                 <p>Also, I enjoying mentoring</p>
             </div>
             <div className="aboutme-link">
-                <a className="aboutme-link-linkedin" href="https://www.linkedin.com/in/philyoo" onClick={handleLinkClick}>
+                <a
+                    className="aboutme-link-linkedin"
+                    href="https://www.linkedin.com/in/philyoo"
+                    target="_blank"
+                    onClick={handleLinkClick}
+                >
                     {/* <InputLabel label={LINKEDIN_ICO}>
                         <p>linkedin.com/in/philyoo</p>
                     </InputLabel> */}

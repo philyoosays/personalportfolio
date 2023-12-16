@@ -118,6 +118,7 @@ const AboutMe = (props: Type.Props) => {
                 <a
                     className="aboutme-link-linkedin"
                     href="https://www.linkedin.com/in/philyoo"
+                    rel="noreferrer"
                     target="_blank"
                     onClick={handleLinkClick}
                 >
